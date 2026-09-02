@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_SYSTEM/OBSIDIAN_READ_ONLY_POLICY.md",
+                "file": "01_CANON_设定圣经/主角卡.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OBSIDIAN_READ_ONLY_POLICY"
+              "title": "主角卡"
             }
           }
         ]
@@ -190,6 +190,14 @@
   },
   "active": "2d81a8a152cb88f7",
   "lastOpenFiles": [
+    "01_CANON_设定圣经/重要配角卡.md",
+    "01_CANON_设定圣经/势力与反派谱系.md",
+    "01_CANON_设定圣经/世界观.md",
+    "01_CANON_设定圣经/设定圣经-Story_Bible.md",
+    "01_CANON_设定圣经/力量体系.md",
+    "01_CANON_设定圣经/反派设计.md",
+    "15_QA_质量审查/MEMORY_FULL_BACKFILL_AUDIT_MIRROR.md",
+    "99_SYSTEM_系统策略/OBSIDIAN_READ_ONLY_POLICY.md",
     "00_HOME/NOVEL_OS_HOME.md",
     "10_CHAPTERS/CH051.md",
     "12_STATE/PROGRESS_TRACKER_MIRROR.md",
@@ -207,12 +215,6 @@
     "07_ABILITIES/九天玄天决.md",
     "01_CANON/主角卡.md",
     "01_CANON/重要配角卡.md",
-    "01_CANON/势力与反派谱系.md",
-    "01_CANON/世界观.md",
-    "01_CANON/设定圣经-Story_Bible.md",
-    "01_CANON/反派设计.md",
-    "15_QA/RISK_GATE_MIRROR.md",
-    "15_QA/QA_POLICY_MIRROR.md",
-    "15_QA/MEMORY_FULL_BACKFILL_AUDIT_MIRROR.md"
+    "01_CANON/势力与反派谱系.md"
   ]
 }
