@@ -1,16 +1,17 @@
 schema_version: "2.1"
 
 # 核心权限法则：HUMAN > CANON > CONTINUITY > STATE > OUTLINE > PLOT > STYLE > TONE
+# 权限词汇表：READ_ONLY | WRITE | FORBIDDEN | PROPOSAL_ONLY | AUTHORIZED
 
 workers:
   MASTER_ORCHESTRATOR:
     role_type: "ORCHESTRATOR"
-    read_canon: true
-    read_state: true
-    read_outline: true
-    write_draft: false
-    write_canon: "AUTHORIZED_ONLY"
-    write_state: "AUTHORIZED_ONLY"
+    read_canon: "READ_ONLY"
+    read_state: "READ_ONLY"
+    read_outline: "READ_ONLY"
+    write_draft: "FORBIDDEN"
+    write_canon: "AUTHORIZED"
+    write_state: "AUTHORIZED"
     can_route: true
     allowed_write_paths:
       - "00_SYSTEM/EXECUTION_STATE.yaml"
@@ -18,12 +19,12 @@ workers:
 
   OH_STORY:
     role_type: "ADVISORY"
-    read_canon: true
-    read_state: true
-    read_outline: true
-    write_draft: false
-    write_canon: false
-    write_state: false
+    read_canon: "READ_ONLY"
+    read_state: "READ_ONLY"
+    read_outline: "READ_ONLY"
+    write_draft: "FORBIDDEN"
+    write_canon: "FORBIDDEN"
+    write_state: "FORBIDDEN"
     can_route: false
     output_classification: "ADVISORY"
     allowed_write_paths:
@@ -31,10 +32,10 @@ workers:
 
   WEBNOVEL_WRITER:
     role_type: "PRODUCTION"
-    read_canon: true
-    read_state: true
-    read_outline: true
-    write_draft: true
+    read_canon: "READ_ONLY"
+    read_state: "READ_ONLY"
+    read_outline: "READ_ONLY"
+    write_draft: "WRITE"
     write_canon: "PROPOSAL_ONLY"
     write_state: "PROPOSAL_ONLY"
     can_route: false
@@ -47,12 +48,12 @@ workers:
 
   DE_AI_PROMPT_ENHANCER:
     role_type: "ADVISORY"
-    read_canon: "LIMITED_READ_ONLY"
-    read_state: "LIMITED_READ_ONLY"
-    read_outline: false
-    write_draft: false
-    write_canon: false
-    write_state: false
+    read_canon: "READ_ONLY"
+    read_state: "READ_ONLY"
+    read_outline: "FORBIDDEN"
+    write_draft: "FORBIDDEN"
+    write_canon: "FORBIDDEN"
+    write_state: "FORBIDDEN"
     can_route: false
     output_classification: "ADVISORY"
     allowed_write_paths:
@@ -60,15 +61,36 @@ workers:
 
   LIEFLAT_LESS_AI_TONE:
     role_type: "PRODUCTION_FILTER"
-    read_canon: false
-    read_state: false
-    read_outline: false
-    write_draft: "TONE_EDIT_ONLY"
-    write_canon: false
-    write_state: false
+    read_canon: "FORBIDDEN"
+    read_state: "FORBIDDEN"
+    read_outline: "FORBIDDEN"
+    write_draft: "WRITE"  # 仅限 Tone Edit 润色，受 Diff 门禁保护
+    write_canon: "FORBIDDEN"
+    write_state: "FORBIDDEN"
     can_route: false
     output_classification: "PRODUCTION-ARTIFACT"
     diff_integrity_enforced: true
     allowed_write_paths:
       - "03_PRODUCTION/TONE/"
       - "03_PRODUCTION/FINAL/"
+
+platform_adapters:
+  FANQIE_PLATFORM_ADAPTER:
+    role_type: "PLATFORM_ADAPTER"
+    platform: "fanqie"
+    read_canon: "READ_ONLY"
+    read_outline: "READ_ONLY"
+    read_state: "READ_ONLY"
+    read_final_prose: "READ_ONLY"
+    read_marketing: "READ_ONLY"
+    write_canon: "FORBIDDEN"
+    write_outline: "FORBIDDEN"
+    write_state: "FORBIDDEN"
+    write_story_prose: "FORBIDDEN"
+    proposal_platform_adaptation: "PROPOSAL_ONLY"
+    can_route: false
+    output_classification: "PLATFORM-PACKAGE / ADVISORY / PROPOSAL"
+    allowed_write_namespaces:
+      - "05_MARKETING/fanqie/"
+      - "03_PRODUCTION/FINAL/platform_packages/fanqie/"
+      - "00_SYSTEM/fanqie_compliance_audit_report.md"
