@@ -1,0 +1,31 @@
+{
+  "Word_Count": {
+    "target": "200-800 chars",
+    "actual": 171,
+    "passed": true
+  },
+  "Entity_Check": {
+    "required": [
+      "陆辰",
+      "陆小晚"
+    ],
+    "missing": [],
+    "passed": true
+  },
+  "Required_Event_Check": {
+    "cbn": "苏醒并确认至亲安危",
+    "passed": true
+  },
+  "Forbidden_Event_Check": {
+    "forbidden": "话疗/认怂",
+    "passed": true
+  },
+  "Basic_Canon_Check": {
+    "canon": "仙尊归来/护妹动机",
+    "passed": true
+  },
+  "Ending_Hook_Check": {
+    "hook": "立誓复仇护妹",
+    "passed": true
+  }
+}

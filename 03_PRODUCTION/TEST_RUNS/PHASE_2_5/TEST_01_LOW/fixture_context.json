@@ -1,0 +1,28 @@
+{
+  "l0_context": {
+    "chapter_id": 1,
+    "title": "第0001章：重返人间，仙尊之怒 (PoC Replay Fixture)",
+    "location": "江海市第一人民医院·急救病房",
+    "pov": "陆辰 (第三人称主角限制视点)",
+    "active_characters": [
+      "陆辰",
+      "陆小晚"
+    ],
+    "active_conflict": "重伤初愈，面对巨额医药费压迫",
+    "cbn_objective": "仙尊重返都市苏醒，护持至亲妹妹陆小晚"
+  },
+  "l1_canon": {
+    "protagonist": {
+      "name": "陆辰",
+      "realm": "渡劫转世/初醒练气",
+      "core_motivation": "庇护妹妹陆小晚，重登仙界"
+    },
+    "family": {
+      "sister": "陆小晚 (玄阴圣体雏形)"
+    },
+    "world_rules": [
+      "凡人都市背景",
+      "仙道神识压制"
+    ]
+  }
+}

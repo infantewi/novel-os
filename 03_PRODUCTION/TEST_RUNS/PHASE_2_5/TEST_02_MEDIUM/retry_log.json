@@ -1,0 +1,16 @@
+[
+  {
+    "attempt": 1,
+    "worker": "WEBNOVEL_WRITER",
+    "stage": "DRAFT",
+    "action": "RETRY_SAME_STAGE",
+    "max_retries": 2
+  },
+  {
+    "attempt": 2,
+    "worker": "WEBNOVEL_WRITER",
+    "stage": "DRAFT",
+    "status": "SUCCESS",
+    "request_id": "P2.5-T2-REQ-003-ATT2"
+  }
+]

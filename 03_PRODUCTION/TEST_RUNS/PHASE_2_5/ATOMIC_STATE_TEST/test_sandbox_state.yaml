@@ -1,0 +1,3 @@
+counter: 100
+schema_version: '2.1'
+state: COMMITTED_BASE
