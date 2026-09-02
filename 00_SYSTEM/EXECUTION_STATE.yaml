@@ -14,6 +14,24 @@ pipeline_locks:
   write_lock: false
   active_agent: "none"
 
-last_checkpoint: "2026-09-02_v2.1_bootstrap"
+workers:
+  oh_story:
+    status: "IDLE"
+    last_request_id: null
+    last_active: null
+  webnovel_writer:
+    status: "IDLE"
+    last_request_id: null
+    last_active: null
+  de_ai:
+    status: "IDLE"
+    last_request_id: null
+    last_active: null
+  lieflat:
+    status: "IDLE"
+    last_request_id: null
+    last_active: null
+
+last_checkpoint: "2026-09-02_v2.1_phase2_worker_binding"
 human_approval_required: false
 production_status: "STANDBY_FOR_CHAPTER_50"

@@ -1,71 +1,74 @@
 schema_version: "2.1"
 
-roles:
+# 核心权限法则：HUMAN > CANON > CONTINUITY > STATE > OUTLINE > PLOT > STYLE > TONE
+
+workers:
   MASTER_ORCHESTRATOR:
-    scope: "Routing / State Machine / Permission Matrix / Risk Gatekeeper"
-    can_write:
+    role_type: "ORCHESTRATOR"
+    read_canon: true
+    read_state: true
+    read_outline: true
+    write_draft: false
+    write_canon: "AUTHORIZED_ONLY"
+    write_state: "AUTHORIZED_ONLY"
+    can_route: true
+    allowed_write_paths:
       - "00_SYSTEM/EXECUTION_STATE.yaml"
       - "06_HANDOFF/HANDOFF_CURRENT.md"
-    cannot_write:
-      - "Prose Text"
-      - "Canon Source (without explicit human approval)"
 
   OH_STORY:
-    scope: "Creative / Commercial / Market / Architecture / Packaging"
-    can_read:
-      - "01_CANON/"
-      - "02_OUTLINE/"
-      - "04_STATE/"
-      - "references/"
-    can_write:
+    role_type: "ADVISORY"
+    read_canon: true
+    read_state: true
+    read_outline: true
+    write_draft: false
+    write_canon: false
+    write_state: false
+    can_route: false
+    output_classification: "ADVISORY"
+    allowed_write_paths:
       - "05_MARKETING/"
-      - "02_OUTLINE/ARC_OUTLINE/proposals/"
-    cannot_write:
-      - "01_CANON/"
-      - "04_STATE/"
-      - "03_PRODUCTION/FINAL/"
 
   WEBNOVEL_WRITER:
-    scope: "Canon / Outline / Chapter Plan / State / Continuity / Production"
-    can_read:
-      - "00_SYSTEM/"
-      - "01_CANON/"
-      - "02_OUTLINE/"
-      - "03_PRODUCTION/"
-      - "04_STATE/"
-    can_write:
-      - "01_CANON/"
-      - "02_OUTLINE/"
+    role_type: "PRODUCTION"
+    read_canon: true
+    read_state: true
+    read_outline: true
+    write_draft: true
+    write_canon: "PROPOSAL_ONLY"
+    write_state: "PROPOSAL_ONLY"
+    can_route: false
+    output_classification: "PRODUCTION-ARTIFACT / AUTHORITATIVE-CANDIDATE"
+    allowed_write_paths:
       - "03_PRODUCTION/CONTEXT/"
       - "03_PRODUCTION/DRAFT/"
       - "03_PRODUCTION/CANON_QA/"
-      - "04_STATE/"
-    constraints: "Major Canon modifications require Human Approval"
+      - "02_OUTLINE/CHAPTER_PLAN/"
 
   DE_AI_PROMPT_ENHANCER:
-    scope: "Writing Style Protocol / Sensory Expressions / Human Rhythm Guidance"
-    can_read:
-      - "03_PRODUCTION/CONTEXT/"
-      - "02_OUTLINE/CHAPTER_PLAN/"
-    can_write:
+    role_type: "ADVISORY"
+    read_canon: "LIMITED_READ_ONLY"
+    read_state: "LIMITED_READ_ONLY"
+    read_outline: false
+    write_draft: false
+    write_canon: false
+    write_state: false
+    can_route: false
+    output_classification: "ADVISORY"
+    allowed_write_paths:
       - "03_PRODUCTION/STYLE/"
-    cannot_write:
-      - "Plot Structure"
-      - "01_CANON/"
-      - "04_STATE/"
 
   LIEFLAT_LESS_AI_TONE:
-    scope: "Final Language Cleanup / De-slop / Prose Polishing"
-    can_read:
-      - "03_PRODUCTION/DRAFT/"
-      - "03_PRODUCTION/STYLE/"
-    can_write:
+    role_type: "PRODUCTION_FILTER"
+    read_canon: false
+    read_state: false
+    read_outline: false
+    write_draft: "TONE_EDIT_ONLY"
+    write_canon: false
+    write_state: false
+    can_route: false
+    output_classification: "PRODUCTION-ARTIFACT"
+    diff_integrity_enforced: true
+    allowed_write_paths:
       - "03_PRODUCTION/TONE/"
       - "03_PRODUCTION/FINAL/"
-    cannot_write:
-      - "Add Plot"
-      - "Delete Events"
-      - "Modify Character Decisions"
-      - "Modify Canon"
-      - "Modify Timeline"
-      - "Modify Relations"
