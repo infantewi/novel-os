@@ -1,0 +1,29 @@
+schema_version: "2.2"
+
+retrieval_policies:
+  query_routing:
+    simple_entity_lookup:
+      method: "find()"
+      target: "L0_Abstract"
+    complex_scene_query:
+      method: "search(mode='standard')"
+      target: "L0_L1_Hybrid"
+    worker_context_assembly:
+      method: "search(mode='context')"
+      target: "L0_L1_L2_Assembled"
+
+  budget_limits:
+    max_l0_abstracts: 20
+    max_l1_overviews: 10
+    max_l2_detailed_nodes: 3
+    token_budget_ratio_max: 0.25
+
+  fallback_policy:
+    critical_production:
+      allow_silent_fallback: false
+      action_on_failure: "BLOCK_STOP_REPORT"
+      escalation: "NEEDS_HUMAN"
+    diagnostic_non_critical:
+      allow_fallback: true
+      fallback_backend: "context_ranker"
+      require_logging: true

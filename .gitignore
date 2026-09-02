@@ -16,5 +16,8 @@ __pycache__/
 # System and temporary caches
 .webnovel/tmp/
 .webnovel/backups/
+.openviking/storage/
+*.tmp
 .DS_Store
 Thumbs.db
+

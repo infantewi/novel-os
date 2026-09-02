@@ -94,3 +94,28 @@ platform_adapters:
       - "05_MARKETING/fanqie/"
       - "03_PRODUCTION/FINAL/platform_packages/fanqie/"
       - "00_SYSTEM/fanqie_compliance_audit_report.md"
+
+memory_infrastructure:
+  NOVEL_MEMORY_GOVERNOR:
+    role_type: "GOVERNOR"
+    read_canon: "READ_ONLY"
+    read_state: "READ_ONLY"
+    read_outline: "READ_ONLY"
+    write_canon: "FORBIDDEN"
+    write_state: "FORBIDDEN"
+    write_openviking: "AUTHORIZED"
+    can_route: false
+    allowed_write_paths:
+      - "04_STATE/memory_registry.json"
+      - ".openviking/storage/"
+
+  OPENVIKING_ADAPTER:
+    role_type: "RETRIEVAL_INFRASTRUCTURE"
+    read_memory: "READ_ONLY"
+    write_canon: "FORBIDDEN"
+    write_state: "FORBIDDEN"
+    write_prose: "FORBIDDEN"
+    can_route: false
+    allowed_storage_namespaces:
+      - ".openviking/storage/"
+
