@@ -1,0 +1,17 @@
+{
+  "fixture_id": "FIXTURE-POC003-CANON-MUTATION",
+  "chapter_id": 103,
+  "title": "沙盒测试章003：金丹大能，魔功惊世 (CONFLICTING FIXTURE)",
+  "conflicting_claims": {
+    "protagonist_realm": "金丹中期 (Golden Core Middle Stage)",
+    "protagonist_weapon": "极品神仙天问剑",
+    "protagonist_cultivation": "幽冥血煞魔功",
+    "protagonist_faction": "黑煞魔门掌教"
+  },
+  "official_truth_baseline": {
+    "protagonist_realm": "筑基初期",
+    "protagonist_weapon": "下品灵器惊鸿剑",
+    "protagonist_cultivation": "九天玄天决",
+    "protagonist_faction": "玄天仙尊转世 / 江海陆家"
+  }
+}

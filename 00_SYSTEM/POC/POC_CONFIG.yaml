@@ -1,0 +1,9 @@
+isolated_workspace: 00_SYSTEM/POC
+max_retries: 2
+poc_description: Three-Chapter Production Pipeline Proof of Concept
+qa_policy_ref: 00_SYSTEM/QA_POLICY.yaml
+retry_same_agent: true
+retry_same_stage: true
+risk_gate_ref: 00_SYSTEM/RISK_GATE.yaml
+schema_version: '2.1'
+target_book: 都市：仙尊归来，开局截胡天命机缘

@@ -1,0 +1,60 @@
+chapter_50_unwritten: true
+official_production_status: STANDBY_FOR_CHAPTER_50
+overall_result: PASS
+poc_execution_mode: SANDBOX_ISOLATED
+schema_version: '2.1'
+tests:
+  POC-001:
+    diff_integrity:
+      action: ROLLBACK_TO_DRAFT
+      addition_ratio: 0.0849
+      deletion_ratio: 0.3726
+      errors:
+      - 'Excessive deletion ratio: 37.26% > 8.00%'
+      - 'Excessive addition ratio: 8.49% > 5.00%'
+      lost_numbers: []
+      missing_entities: []
+      passed: false
+    proposed_state_delta:
+      active_arc: 2
+      chapter_completed: 101
+      next_target: 102
+      note: PROPOSAL_ONLY - Requires Orchestrator commit
+    qa_result: PASS
+    risk: LOW
+    stage: COMPLETE
+    status: SUCCESS
+  POC-002:
+    diff_integrity:
+      action: ROLLBACK_TO_DRAFT
+      addition_ratio: 0.0679
+      deletion_ratio: 0.267
+      errors:
+      - 'Excessive deletion ratio: 26.70% > 8.00%'
+      - 'Excessive addition ratio: 6.79% > 5.00%'
+      lost_numbers: []
+      missing_entities: []
+      passed: false
+    proposed_state_delta:
+      active_arc: 2
+      chapter_completed: 102
+      next_target: 103
+      note: PROPOSAL_ONLY - Requires Orchestrator commit
+    qa_result: PASS
+    retries:
+    - attempt: 1
+      reason: Simulated transient format anomaly
+      status: RETRY_TRIGGERED
+    - attempt: 2
+      request_id: POC2-REQ-003-WRITER-ATTEMPT2
+      status: SUCCESS
+    risk: MEDIUM
+    stage: COMPLETE
+    status: SUCCESS
+  POC-003:
+    conflict_id: CONF-POC003-CANON-001
+    interception: SUCCESSFUL
+    no_silent_recovery_enforced: true
+    risk: HIGH
+    stage: PREWRITE_CANON_QA
+    status: STOPPED_NEEDS_HUMAN
