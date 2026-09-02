@@ -29,7 +29,8 @@ class VaultExporter:
         self.temp_root.mkdir(parents=True, exist_ok=True)
 
         for cat in VaultMapper.CATEGORIES:
-            (self.temp_root / cat).mkdir(parents=True, exist_ok=True)
+            dir_name = VaultMapper.get_category_dir(cat)
+            (self.temp_root / dir_name).mkdir(parents=True, exist_ok=True)
 
         print("[EXPORTER] Exporting Category 00_HOME...")
         self._export_home()
@@ -90,9 +91,10 @@ class VaultExporter:
         print("[EXPORTER] Promoting temp vault atomically to target vault root...")
         self.vault_root.mkdir(parents=True, exist_ok=True)
         for cat in VaultMapper.CATEGORIES:
-            target_cat = self.vault_root / cat
+            dir_name = VaultMapper.get_category_dir(cat)
+            target_cat = self.vault_root / dir_name
             target_cat.mkdir(parents=True, exist_ok=True)
-            src_cat = self.temp_root / cat
+            src_cat = self.temp_root / dir_name
             for src_file in src_cat.glob("*"):
                 dest_file = target_cat / src_file.name
                 shutil.copy2(src_file, dest_file)
@@ -109,13 +111,16 @@ class VaultExporter:
         return manifest_data
 
     def _write_file(self, category: str, filename: str, metadata: Dict[str, Any], content: str):
-        file_path = self.temp_root / category / filename
+        dir_name = VaultMapper.get_category_dir(category)
+        file_path = self.temp_root / dir_name / filename
+        file_path.parent.mkdir(parents=True, exist_ok=True)
         if "generated_at" not in metadata:
             metadata["generated_at"] = self.sync_time
         fm = VaultMapper.format_frontmatter(metadata)
         body = content.strip()
         full_text = f"{fm}\n\n{body}\n"
         file_path.write_text(full_text, encoding="utf-8")
+
 
 
     def _export_home(self):

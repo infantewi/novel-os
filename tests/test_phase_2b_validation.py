@@ -69,7 +69,7 @@ class TestPhase2BValidation(unittest.TestCase):
         """P2B-GATE-02: Verify all 17 categories are present and populated."""
         self.assertTrue(VAULT.exists())
         for cat in VaultMapper.CATEGORIES:
-            cat_dir = VAULT / cat
+            cat_dir = VAULT / VaultMapper.get_category_dir(cat)
             self.assertTrue(cat_dir.exists(), f"Missing category directory: {cat}")
             files = list(cat_dir.glob("*.md"))
             if cat == "99_SYSTEM":
@@ -77,7 +77,7 @@ class TestPhase2BValidation(unittest.TestCase):
             self.assertGreater(len(files), 0, f"Empty category directory: {cat}")
 
         # Check total chapter count in 10_CHAPTERS
-        ch_files = list((VAULT / "10_CHAPTERS").glob("*.md"))
+        ch_files = list((VAULT / VaultMapper.get_category_dir("10_CHAPTERS")).glob("*.md"))
         self.assertEqual(len(ch_files), 51, f"Expected 51 chapter notes, got {len(ch_files)}")
 
     # --- P2B-GATE-03: Mirror Directionality ---
@@ -104,7 +104,6 @@ class TestPhase2BValidation(unittest.TestCase):
                 self.assertIn("sync_mode: READ_ONLY", txt, f"Missing sync_mode in {md_file}")
                 self.assertIn("editable_in_obsidian: false", txt, f"Missing editable_in_obsidian in {md_file}")
 
-
     # --- P2B-GATE-05: Hash Integrity ---
     def test_gate_05_hash_integrity(self):
         """P2B-GATE-05: Verify exact hash preservation on all authoritative sources."""
@@ -114,7 +113,9 @@ class TestPhase2BValidation(unittest.TestCase):
     # --- P2B-GATE-06: Manifest Integrity ---
     def test_gate_06_manifest_integrity(self):
         """P2B-GATE-06: Validate MIRROR_MANIFEST.yaml matches filesystem hashes."""
-        manifest_file = VAULT / "99_SYSTEM" / "MIRROR_MANIFEST.yaml"
+        manifest_file = VAULT / VaultMapper.get_category_dir("99_SYSTEM") / "MIRROR_MANIFEST.yaml"
+        if not manifest_file.exists():
+            manifest_file = VAULT / "99_SYSTEM" / "MIRROR_MANIFEST.yaml"
         self.assertTrue(manifest_file.exists())
         manifest = yaml.safe_load(manifest_file.read_text(encoding="utf-8"))
         self.assertEqual(manifest["sync_mode"], "READ_ONLY")
@@ -150,12 +151,10 @@ class TestPhase2BValidation(unittest.TestCase):
                 self.assertIn(k, m2["mirror_hashes"])
                 self.assertEqual(m1["mirror_hashes"][k], m2["mirror_hashes"][k])
 
-
     # --- P2B-GATE-08: Atomic Replacement ---
     def test_gate_08_atomic_replacement(self):
         """P2B-GATE-08: Verify atomic pipeline pattern in VaultExporter."""
         exporter = VaultExporter(source_root=ROOT, vault_root=VAULT, temp_root=ROOT / "scripts" / "_temp" / "test_temp")
-        # Ensure temp_root is cleaned and used for staging
         self.assertIsNotNone(exporter)
 
     # --- P2B-GATE-09: Obsidian Mutation Resistance ---
@@ -166,11 +165,11 @@ class TestPhase2BValidation(unittest.TestCase):
             shutil.copytree(VAULT, sandbox_vault)
 
             # Mutate sandbox files
-            mutated_canon = sandbox_vault / "01_CANON" / "设定圣经-Story_Bible.md"
+            mutated_canon = sandbox_vault / VaultMapper.get_category_dir("01_CANON") / "设定圣经-Story_Bible.md"
             mutated_canon.write_text("MUTATION: Fake Canon", encoding="utf-8")
 
             # Fake CH052 in sandbox
-            fake_ch52 = sandbox_vault / "10_CHAPTERS" / "CH052.md"
+            fake_ch52 = sandbox_vault / VaultMapper.get_category_dir("10_CHAPTERS") / "CH052.md"
             fake_ch52.write_text("MUTATION: Fake CH052", encoding="utf-8")
 
             # Verify real NOVEL OS sources remain completely untouched
@@ -248,7 +247,8 @@ class TestPhase2BValidation(unittest.TestCase):
         # 3. No CH052 in 06_HANDOFF
         self.assertEqual(len([p for p in (ROOT / "06_HANDOFF").glob("*") if "052" in p.name or "ch52" in p.name.lower()]), 0)
         # 4. No CH052 in VAULT/10_CHAPTERS
-        self.assertEqual(len([p for p in (VAULT / "10_CHAPTERS").glob("*") if "052" in p.name or "ch52" in p.name.lower()]), 0)
+        ch_dir = VAULT / VaultMapper.get_category_dir("10_CHAPTERS")
+        self.assertEqual(len([p for p in ch_dir.glob("*") if "052" in p.name or "ch52" in p.name.lower()]), 0)
 
     # --- P2B-GATE-18: Workspace Isolation ---
     def test_gate_18_workspace_isolation(self):
@@ -288,7 +288,7 @@ class TestPhase2BValidation(unittest.TestCase):
     def test_gate_22_full_mirror_audit(self):
         """P2B-GATE-22: Category-by-category verification of mirror integrity."""
         for cat in VaultMapper.CATEGORIES:
-            cat_p = VAULT / cat
+            cat_p = VAULT / VaultMapper.get_category_dir(cat)
             self.assertTrue(cat_p.exists())
             self.assertTrue(cat_p.is_dir())
             md_files = list(cat_p.glob("*.md"))

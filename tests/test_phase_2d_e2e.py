@@ -458,7 +458,8 @@ class TestPhase2DE2EGovernance(unittest.TestCase):
         """TEST T: Proposal Manager initializes cleanly relying only on repository files."""
         with tempfile.TemporaryDirectory() as td:
             pm = ProposalManager(workspace_root=ROOT, vault_root=Path(td) / "VAULT")
-            self.assertTrue((Path(td) / "VAULT" / "16_PROPOSALS" / "01_DRAFT").exists())
+            from obsidian_adapter.mapper import VaultMapper
+            self.assertTrue((Path(td) / "VAULT" / VaultMapper.get_category_dir("16_PROPOSALS") / "01_DRAFT_草稿").exists())
 
     # --- TEST U / P2D-GATE-25: Production Contamination Test ---
     def test_scenario_u_production_contamination(self):
@@ -473,7 +474,10 @@ class TestPhase2DE2EGovernance(unittest.TestCase):
     def test_scenario_v_ch052_hard_lock(self):
         """TEST V: Full recursive scan verifies CH052 is strictly ABSENT and LOCKED."""
         self.assertEqual(len([p for p in (ROOT / "正文").glob("*.md") if "0052" in p.name]), 0)
-        self.assertEqual(len([p for p in (VAULT / "10_CHAPTERS").glob("*.md") if "0052" in p.name or "ch052" in p.name.lower()]), 0)
+        from obsidian_adapter.mapper import VaultMapper
+        ch_dir = VAULT / VaultMapper.get_category_dir("10_CHAPTERS")
+        self.assertEqual(len([p for p in ch_dir.glob("*.md") if "0052" in p.name or "ch052" in p.name.lower()]), 0)
+
 
     # --- TEST W / P2D-GATE-25: Protected Asset Hash ---
     def test_scenario_w_protected_asset_hash(self):

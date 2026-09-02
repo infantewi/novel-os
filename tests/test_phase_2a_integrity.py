@@ -76,8 +76,11 @@ class TestPhase2AIntegrity(unittest.TestCase):
         self.assertEqual(len(handoff_52), 0, "CH052 handoff found in 06_HANDOFF/")
 
         # 4. No CH052 in NOVEL_OS_VAULT/10_CHAPTERS
-        vault_ch52 = [f for f in (VAULT / "10_CHAPTERS").glob("*") if "ch052" in f.name.lower() or "0052" in f.name]
-        self.assertEqual(len(vault_ch52), 0, "CH052 markdown found in NOVEL_OS_VAULT/10_CHAPTERS/")
+        for ch_dir in ["10_CHAPTERS", "10_CHAPTERS_章节镜像"]:
+            d = VAULT / ch_dir
+            if d.exists():
+                vault_ch52 = [f for f in d.glob("*") if "ch052" in f.name.lower() or "0052" in f.name]
+                self.assertEqual(len(vault_ch52), 0, f"CH052 markdown found in {ch_dir}/")
 
     def test_05_execution_state_valid(self):
         """TEST-05: EXECUTION_STATE.yaml must confirm completed chapter 51 and standby for 52."""
@@ -113,7 +116,9 @@ class TestPhase2AIntegrity(unittest.TestCase):
 
     def test_09_no_obsidian_to_novel_os_write_path(self):
         """TEST-09: Vault policy must declare read-only and no writeback hooks exist."""
-        policy_file = VAULT / "99_SYSTEM" / "OBSIDIAN_READ_ONLY_POLICY.md"
+        policy_file = VAULT / "99_SYSTEM_系统策略" / "OBSIDIAN_READ_ONLY_POLICY.md"
+        if not policy_file.exists():
+            policy_file = VAULT / "99_SYSTEM" / "OBSIDIAN_READ_ONLY_POLICY.md"
         self.assertTrue(policy_file.exists())
         txt = policy_file.read_text(encoding="utf-8")
         self.assertIn("HUMAN KNOWLEDGE WORKSPACE / VISUAL REVIEW LAYER", txt)
@@ -130,17 +135,21 @@ class TestPhase2AIntegrity(unittest.TestCase):
 
     def test_11_content_contamination(self):
         """TEST-11: Content contamination check (foreshadowing resolution and active states)."""
+        f_dir = VAULT / "09_FORESHADOWING_伏笔追踪"
+        if not f_dir.exists():
+            f_dir = VAULT / "09_FORESHADOWING"
         # H-050-01 must be RESOLVED
-        h50_01 = (VAULT / "09_FORESHADOWING" / "H-050-01_公海万鬼噬魂凶阵.md").read_text(encoding="utf-8")
+        h50_01 = (f_dir / "H-050-01_公海万鬼噬魂凶阵.md").read_text(encoding="utf-8")
         self.assertIn("hook_status: \"RESOLVED\"", h50_01)
 
         # H-050-02 must be ACTIVE
-        h50_02 = (VAULT / "09_FORESHADOWING" / "H-050-02_洪门海外仲裁庭与神农古秘境残图.md").read_text(encoding="utf-8")
+        h50_02 = (f_dir / "H-050-02_洪门海外仲裁庭与神农古秘境残图.md").read_text(encoding="utf-8")
         self.assertIn("hook_status: \"ACTIVE\"", h50_02)
 
         # H-026-01 must be ACTIVE
-        h26_01 = (VAULT / "09_FORESHADOWING" / "H-026-01_南洋黑巫教总坛长线复仇.md").read_text(encoding="utf-8")
+        h26_01 = (f_dir / "H-026-01_南洋黑巫教总坛长线复仇.md").read_text(encoding="utf-8")
         self.assertIn("hook_status: \"ACTIVE\"", h26_01)
+
 
     def test_12_authority_direction(self):
         """TEST-12: Every note in vault must declare valid authority (NOVEL_OS for mirror, HUMAN_PROPOSAL for proposals)."""

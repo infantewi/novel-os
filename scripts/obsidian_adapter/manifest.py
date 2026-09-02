@@ -66,10 +66,13 @@ class MirrorManifest:
 
         manifest_data["total_files"] = total_count
 
-        manifest_path = vault_root / "99_SYSTEM" / "MIRROR_MANIFEST.yaml"
+        from .mapper import VaultMapper
+        system_dir = VaultMapper.get_category_dir("99_SYSTEM")
+        manifest_path = vault_root / system_dir / "MIRROR_MANIFEST.yaml"
         manifest_path.parent.mkdir(parents=True, exist_ok=True)
         with open(manifest_path, "w", encoding="utf-8") as f:
             yaml.dump(manifest_data, f, allow_unicode=True, sort_keys=False)
 
         return manifest_data
+
 

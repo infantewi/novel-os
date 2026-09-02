@@ -41,6 +41,8 @@ from obsidian_adapter.proposals import (
     ProposalManager,
 )
 from obsidian_adapter.validator import MirrorValidator
+from obsidian_adapter.mapper import VaultMapper
+
 
 
 class TestPhase2CProposals(unittest.TestCase):
@@ -79,11 +81,12 @@ class TestPhase2CProposals(unittest.TestCase):
     # --- P2C-GATE-02: Proposal Workspace Isolation ---
     def test_gate_02_proposal_workspace_isolation(self):
         """P2C-GATE-02: 16_PROPOSALS is physically separate from 01_CANON .. 14_MEMORY."""
-        prop_dir = VAULT / "16_PROPOSALS"
+        prop_dir = VAULT / VaultMapper.get_category_dir("16_PROPOSALS")
         self.assertTrue(prop_dir.exists())
-        self.assertNotEqual(prop_dir, VAULT / "01_CANON")
-        self.assertNotEqual(prop_dir, VAULT / "12_STATE")
-        self.assertNotEqual(prop_dir, VAULT / "14_MEMORY")
+        self.assertNotEqual(prop_dir, VAULT / VaultMapper.get_category_dir("01_CANON"))
+        self.assertNotEqual(prop_dir, VAULT / VaultMapper.get_category_dir("12_STATE"))
+        self.assertNotEqual(prop_dir, VAULT / VaultMapper.get_category_dir("14_MEMORY"))
+
 
     # --- P2C-GATE-03: Proposal Schema ---
     def test_gate_03_proposal_schema(self):
@@ -432,7 +435,8 @@ class TestPhase2CProposals(unittest.TestCase):
     def test_gate_23_ch052_lock(self):
         """P2C-GATE-23: Verify CH052 is absent across all novel directories."""
         self.assertEqual(len([p for p in (ROOT / "正文").glob("*.md") if "0052" in p.name]), 0)
-        self.assertEqual(len([p for p in (VAULT / "10_CHAPTERS").glob("*.md") if "0052" in p.name or "ch052" in p.name.lower()]), 0)
+        ch_dir = VAULT / VaultMapper.get_category_dir("10_CHAPTERS")
+        self.assertEqual(len([p for p in ch_dir.glob("*.md") if "0052" in p.name or "ch052" in p.name.lower()]), 0)
 
     # --- P2C-GATE-24: General Workspace Isolation ---
     def test_gate_24_general_workspace_isolation(self):
@@ -454,7 +458,7 @@ class TestPhase2CProposals(unittest.TestCase):
             tp = Path(tf.name)
         try:
             # Force test path to look like inside 16_proposals
-            fake_proposal_path = VAULT / "16_PROPOSALS" / "01_DRAFT" / "test_fake.md"
+            fake_proposal_path = VAULT / VaultMapper.get_category_dir("16_PROPOSALS") / "01_DRAFT_草稿" / "test_fake.md"
             fake_proposal_path.write_text("---\nsource: NOVEL_OS_PROPOSAL\nauthority: CANON\nsync_mode: PROPOSAL_ONLY\n---\n# Invalid", encoding="utf-8")
             ok, msg = MirrorValidator.validate_file(fake_proposal_path)
             fake_proposal_path.unlink()
@@ -463,13 +467,13 @@ class TestPhase2CProposals(unittest.TestCase):
         finally:
             tp.unlink()
 
-
     # --- P2C-GATE-27: Cold-Start Reproducibility ---
     def test_gate_27_cold_start_reproducibility(self):
         """P2C-GATE-27: Proposal system initializes cleanly from scratch."""
         with tempfile.TemporaryDirectory() as td:
             pm = ProposalManager(workspace_root=ROOT, vault_root=Path(td) / "VAULT")
-            self.assertTrue((Path(td) / "VAULT" / "16_PROPOSALS" / "01_DRAFT").exists())
+            self.assertTrue((Path(td) / "VAULT" / VaultMapper.get_category_dir("16_PROPOSALS") / "01_DRAFT_草稿").exists())
+
 
     # --- P2C-GATE-28: End-to-End Proposal Test (14 scenarios) ---
     def test_gate_28_e2e_full_lifecycle(self):

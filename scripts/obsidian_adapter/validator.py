@@ -80,13 +80,15 @@ class MirrorValidator:
                 errors.append(msg)
 
         # Check for forbidden CH052 chapter note
-        ch052_path = vault_root / "10_CHAPTERS" / "CH052.md"
-        if ch052_path.exists():
-            errors.append("CH052.md found in 10_CHAPTERS/ (Forbidden in Phase 2A)")
+        for ch_dir in ["10_CHAPTERS", "10_CHAPTERS_章节镜像"]:
+            ch052_path = vault_root / ch_dir / "CH052.md"
+            if ch052_path.exists():
+                errors.append(f"CH052.md found in {ch_dir}/ (Forbidden in Phase 2A/2B/2C/2D)")
 
         return len(errors) == 0, errors
 
     @classmethod
     def compute_sha256(cls, file_path: Path) -> str:
         return hashlib.sha256(file_path.read_bytes()).hexdigest()
+
 

@@ -9,31 +9,46 @@ from typing import Dict, Any, List, Optional
 class VaultMapper:
     """Maps NOVEL OS domain entities to Obsidian Vault categories."""
 
-    CATEGORIES = [
-        "00_HOME",
-        "01_CANON",
-        "02_CHARACTERS",
-        "03_RELATIONSHIPS",
-        "04_TIMELINE",
-        "05_LOCATIONS",
-        "06_FACTIONS",
-        "07_ABILITIES",
-        "08_ITEMS",
-        "09_FORESHADOWING",
-        "10_CHAPTERS",
-        "11_ARCS",
-        "12_STATE",
-        "13_HANDOFF",
-        "14_MEMORY",
-        "15_QA",
-        "99_SYSTEM"
-    ]
+    CATEGORY_DIRS = {
+        "00_HOME": "00_HOME_监控看板",
+        "01_CANON": "01_CANON_设定圣经",
+        "02_CHARACTERS": "02_CHARACTERS_人物档案",
+        "03_RELATIONSHIPS": "03_RELATIONSHIPS_人际谱系",
+        "04_TIMELINE": "04_TIMELINE_编年时序",
+        "05_LOCATIONS": "05_LOCATIONS_场景地理",
+        "06_FACTIONS": "06_FACTIONS_势力分布",
+        "07_ABILITIES": "07_ABILITIES_功法神通",
+        "08_ITEMS": "08_ITEMS_法宝法器",
+        "09_FORESHADOWING": "09_FORESHADOWING_伏笔追踪",
+        "10_CHAPTERS": "10_CHAPTERS_章节镜像",
+        "11_ARCS": "11_ARCS_分卷大纲",
+        "12_STATE": "12_STATE_状态指标",
+        "13_HANDOFF": "13_HANDOFF_生产交接",
+        "14_MEMORY": "14_MEMORY_记忆库",
+        "15_QA": "15_QA_质量审查",
+        "16_PROPOSALS": "16_PROPOSALS_人类提案",
+        "99_SYSTEM": "99_SYSTEM_系统策略",
+    }
+
+    CATEGORIES = list(CATEGORY_DIRS.keys())
+
+    @classmethod
+    def get_category_dir(cls, category: str) -> str:
+        """Returns the Chinese-English directory name for a category key or folder name."""
+        if category in cls.CATEGORY_DIRS:
+            return cls.CATEGORY_DIRS[category]
+        if category in cls.CATEGORY_DIRS.values():
+            return category
+        # Fallback matching by prefix (e.g. '01_CANON' in '01_CANON_设定圣经')
+        for k, v in cls.CATEGORY_DIRS.items():
+            if category.startswith(k):
+                return v
+        return category
 
     @classmethod
     def get_vault_path(cls, vault_root: Path, category: str, filename: str) -> Path:
-        if category not in cls.CATEGORIES:
-            raise ValueError(f"Unknown vault category: {category}")
-        return vault_root / category / filename
+        dir_name = cls.get_category_dir(category)
+        return vault_root / dir_name / filename
 
     @classmethod
     def format_frontmatter(cls, metadata: Optional[Dict[str, Any]] = None) -> str:
@@ -78,4 +93,3 @@ class VaultMapper:
         if display_text and display_text != target:
             return f"[[{target}|{display_text}]]"
         return f"[[{target}]]"
-

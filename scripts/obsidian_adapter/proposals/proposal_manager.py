@@ -28,10 +28,37 @@ from .proposal_audit import ProposalAuditLogger
 class ProposalManager:
     """High-level facade for proposal creation, submission, review, approval, and execution."""
 
+    SUBDIRS = [
+        "00_INBOX_收件箱",
+        "01_DRAFT_草稿",
+        "02_SUBMITTED_已提交",
+        "03_REVIEW_待评审",
+        "04_APPROVED_已批准",
+        "05_REJECTED_已驳回",
+        "06_COMMITTED_已生效",
+        "99_ARCHIVE_历史归档"
+    ]
+
+    LEGACY_SUBDIRS = [
+        "00_INBOX",
+        "01_DRAFT",
+        "02_SUBMITTED",
+        "03_REVIEW",
+        "04_APPROVED",
+        "05_REJECTED",
+        "06_COMMITTED",
+        "99_ARCHIVE"
+    ]
+
     def __init__(self, workspace_root: Optional[Path] = None, vault_root: Optional[Path] = None):
         self.workspace_root = workspace_root or Path("D:/Ai work/novel")
         self.vault_root = vault_root or (self.workspace_root / "NOVEL_OS_VAULT")
-        self.proposals_dir = self.vault_root / "16_PROPOSALS"
+        
+        # Check if Chinese-English folder exists or default
+        if (self.vault_root / "16_PROPOSALS").exists() and not (self.vault_root / "16_PROPOSALS_人类提案").exists():
+            self.proposals_dir = self.vault_root / "16_PROPOSALS_人类提案"
+        else:
+            self.proposals_dir = self.vault_root / "16_PROPOSALS_人类提案"
         
         self.permission_gate = ProposalPermissionGate(self.workspace_root / "00_SYSTEM" / "PERMISSION_MATRIX.yaml")
         self.risk_gate = ProposalRiskGate(self.workspace_root / "00_SYSTEM" / "RISK_GATE.yaml")
@@ -42,22 +69,13 @@ class ProposalManager:
         self._ensure_proposal_directories()
 
     def _ensure_proposal_directories(self):
-        subdirs = [
-            "00_INBOX",
-            "01_DRAFT",
-            "02_SUBMITTED",
-            "03_REVIEW",
-            "04_APPROVED",
-            "05_REJECTED",
-            "06_COMMITTED",
-            "99_ARCHIVE"
-        ]
-        for sub in subdirs:
+        for sub in self.SUBDIRS:
             (self.proposals_dir / sub).mkdir(parents=True, exist_ok=True)
             
         readme_path = self.proposals_dir / "README.md"
         if not readme_path.exists():
             readme_path.write_text(
+                "---\ntitle: NOVEL OS V2.3 — Human Proposal Workspace\ncategory: 16_PROPOSALS\nsource: NOVEL_OS_PROPOSAL\nauthority: HUMAN_PROPOSAL\nsync_mode: PROPOSAL_ONLY\neditable_in_obsidian: true\n---\n\n"
                 "# NOVEL OS V2.3 — Human Proposal Workspace\n\n"
                 "This directory is dedicated to Human Proposal submission and review.\n"
                 "Proposals stored here are **PROPOSALS ONLY (PROPOSAL != FACT)**.\n"
@@ -67,21 +85,21 @@ class ProposalManager:
 
     def _get_status_subdir(self, status: ProposalLifecycleStatus) -> str:
         mapping = {
-            ProposalLifecycleStatus.DRAFT: "01_DRAFT",
-            ProposalLifecycleStatus.SUBMITTED: "02_SUBMITTED",
-            ProposalLifecycleStatus.VALIDATING: "02_SUBMITTED",
-            ProposalLifecycleStatus.VALIDATED: "03_REVIEW",
-            ProposalLifecycleStatus.HUMAN_REVIEW: "03_REVIEW",
-            ProposalLifecycleStatus.APPROVED: "04_APPROVED",
-            ProposalLifecycleStatus.COMMITTING: "04_APPROVED",
-            ProposalLifecycleStatus.COMMITTED: "06_COMMITTED",
-            ProposalLifecycleStatus.REJECTED: "05_REJECTED",
-            ProposalLifecycleStatus.CONFLICT: "05_REJECTED",
-            ProposalLifecycleStatus.BLOCKED: "05_REJECTED",
-            ProposalLifecycleStatus.EXPIRED: "99_ARCHIVE",
-            ProposalLifecycleStatus.CANCELLED: "99_ARCHIVE",
+            ProposalLifecycleStatus.DRAFT: "01_DRAFT_草稿",
+            ProposalLifecycleStatus.SUBMITTED: "02_SUBMITTED_已提交",
+            ProposalLifecycleStatus.VALIDATING: "02_SUBMITTED_已提交",
+            ProposalLifecycleStatus.VALIDATED: "03_REVIEW_待评审",
+            ProposalLifecycleStatus.HUMAN_REVIEW: "03_REVIEW_待评审",
+            ProposalLifecycleStatus.APPROVED: "04_APPROVED_已批准",
+            ProposalLifecycleStatus.COMMITTING: "04_APPROVED_已批准",
+            ProposalLifecycleStatus.COMMITTED: "06_COMMITTED_已生效",
+            ProposalLifecycleStatus.REJECTED: "05_REJECTED_已驳回",
+            ProposalLifecycleStatus.CONFLICT: "05_REJECTED_已驳回",
+            ProposalLifecycleStatus.BLOCKED: "05_REJECTED_已驳回",
+            ProposalLifecycleStatus.EXPIRED: "99_ARCHIVE_历史归档",
+            ProposalLifecycleStatus.CANCELLED: "99_ARCHIVE_历史归档",
         }
-        return mapping.get(status, "00_INBOX")
+        return mapping.get(status, "00_INBOX_收件箱")
 
     def save_proposal(self, proposal: Proposal) -> Path:
         """Saves proposal markdown in the appropriate status subfolder, removing older copies."""
@@ -93,7 +111,7 @@ class ProposalManager:
         target_file = target_folder / filename
         
         # Remove from other folders if status moved
-        for sub in ["00_INBOX", "01_DRAFT", "02_SUBMITTED", "03_REVIEW", "04_APPROVED", "05_REJECTED", "06_COMMITTED", "99_ARCHIVE"]:
+        for sub in self.SUBDIRS + self.LEGACY_SUBDIRS:
             other_p = self.proposals_dir / sub / filename
             if other_p.exists() and other_p != target_file:
                 other_p.unlink()
@@ -105,12 +123,13 @@ class ProposalManager:
     def load_proposal(self, proposal_id: str) -> Optional[Proposal]:
         """Finds and loads a proposal from any subfolder."""
         filename = f"{proposal_id}.md"
-        for sub in ["00_INBOX", "01_DRAFT", "02_SUBMITTED", "03_REVIEW", "04_APPROVED", "05_REJECTED", "06_COMMITTED", "99_ARCHIVE"]:
+        for sub in self.SUBDIRS + self.LEGACY_SUBDIRS:
             p_file = self.proposals_dir / sub / filename
             if p_file.exists():
                 txt = p_file.read_text(encoding="utf-8")
                 return ProposalParser.parse_from_markdown(txt)
         return None
+
 
     def create_proposal(
         self,
