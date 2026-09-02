@@ -49,7 +49,21 @@ class ProposalPermissionGate:
                 return True, f"Actor '{actor}' authorized to approve proposal."
             return False, f"Actor '{actor}' is not authorized to approve proposals."
 
-        # 4. Action: COMMIT
+        # 4. Action: REJECT
+        if act == "REJECT":
+            allowed_rejecters = ["HUMAN", "HUMAN_AUTHOR", "HUMAN_GATE", "MASTER_ORCHESTRATOR"]
+            if any(a in act_actor for a in allowed_rejecters):
+                return True, f"Actor '{actor}' authorized to reject proposal."
+            return False, f"Actor '{actor}' is not authorized to reject proposals."
+
+        # 5. Action: REQUEST_REVISION
+        if act == "REQUEST_REVISION":
+            allowed_reviewers = ["HUMAN", "HUMAN_AUTHOR", "HUMAN_GATE", "MASTER_ORCHESTRATOR"]
+            if any(a in act_actor for a in allowed_reviewers):
+                return True, f"Actor '{actor}' authorized to request revisions."
+            return False, f"Actor '{actor}' is not authorized to request revisions."
+
+        # 6. Action: COMMIT
         if act == "COMMIT":
             # Obsidian cannot directly commit
             if "OBSIDIAN" in act_actor and "HUMAN" not in act_actor:
@@ -65,3 +79,4 @@ class ProposalPermissionGate:
             return False, f"Actor '{actor}' is not authorized to commit."
 
         return False, f"Unknown action '{action}'."
+
