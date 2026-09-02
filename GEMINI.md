@@ -15,6 +15,7 @@
   - story-cover：AI 封面提示词生成
   - story-import：已有作品导入与逆向分析
 - **lieflat-less-ai-tone**：283 万字真实语料库智能替换去 AI 味
+- **openviking-memory**：火山引擎 OpenViking 智能体长效上下文与跨会话记忆库（支持 `find`/`search`/`read`/`remember` 长期设定与写作经验沉淀）
 ## NOVEL OS V2.1 系统总则 (System Authority)
 - **最高法则**：`HUMAN > CANON > CONTINUITY > STATE > OUTLINE > PLOT > STYLE > TONE`
 - **总控中枢**：`00_SYSTEM/MASTER_ORCHESTRATOR_V2.1.md`

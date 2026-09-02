@@ -1,6 +1,6 @@
 project: 《都市：仙尊归来，开局截胡天命机缘》
 phase: PHASE_2C_FULL_MEMORY_BACKFILL
-status: BATCH_04_COMPLETE_WAITING_HUMAN_APPROVAL
+status: FULL_BACKFILL_COMPLETE_WAITING_HUMAN_APPROVAL
 batches:
 - id: BATCH-01
   chapters: CH001-CH010
@@ -137,14 +137,41 @@ batches:
   retrieval_pass_rate: 100.0%
   checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_04_REPORT.md
   status: ACCEPTED_PENDING_HUMAN_GATE
+- id: BATCH-05
+  chapters: CH041-CH050
+  source_hashes:
+    CH041_第0041章-国之利刃？不堪一击.md: 41bb3aa490411414d9d1564ec0d7da1bd35c060753d56f9a7b8808f54288b804
+    CH042_第0042章-筑基神迹，军方折服.md: 77e615c82670f0305c0d8ef4a513b27145b1834512e95180ca03b5c691835f96
+    CH043_第0043章-江海第一人，赴约金陵.md: 20b011caafd56c75aa44810b1f13b6bd865efa6de5a41759a5bd17ce12b1c5b7
+    CH044_第0044章-秦淮夜雨，血染金陵.md: dbb88dc5d27a5483ba9dc301a086609b871a727c0d94417c6e4c44f19756aeeb
+    CH045_第0045章-拔剑，斩宗师.md: e3306ee67be6e581b797be25b3e4da4f766b3d62d161e95fe2942b91d6cdc16f
+    CH046_第0046章-余波震荡，燕京震怖.md: 02d5db4fba5c0a049e003416171f12a4f2962382650b2c62befa675232af77e3
+    CH047_第0047章-暗影潜江，狙击神话.md: 6f97aceaf03e1ca207d17912302081e29336ca7bbacab64f76e2589d959e43f8
+    CH048_第0048章-战术温压弹，袖里乾坤.md: 441d999f63918c8880eeb110c7a4f71cf990f842ec45effc7bcfbf39e6e19703
+    CH049_第0049章-搜魂夺魄，洪门秘辛.md: 947d900af67978786b8c0b769dadf5627fc60e859d25cd20f38df09c4c16df79
+    CH050_第0050章-踏浪登轮，一指断臂.md: 4147d6b83c21126faebf2db34dc4bcd33cbd01d781c32338554fd07c854b2a3c
+  candidate_count: 26
+  accepted_count: 26
+  rejected_count: 0
+  conflicts: 0
+  duplicates: 0
+  boundary_blocks: 0
+  quality_distribution:
+    A: 26
+    B: 0
+    C: 0
+    REJECT: 0
+  retrieval_pass_rate: 100.0%
+  checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_05_REPORT.md
+  status: ACCEPTED_PENDING_HUMAN_GATE
 global:
-  total_candidates: 131
-  total_accepted: 130
+  total_candidates: 157
+  total_accepted: 156
   total_rejected: 0
   total_conflicts: 0
   total_duplicates: 0
   total_boundary_blocks: 0
-  total_memory_nodes: 130
-  retrieval_tests: 60
+  total_memory_nodes: 131
+  retrieval_tests: 160
   retrieval_pass_rate: 100.0%
-  integrity_status: PASS
+  integrity_status: ALL_PASS
