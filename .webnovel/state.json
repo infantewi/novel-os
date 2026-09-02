@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "project": {
+    "title": "都市：仙尊归来，开局截胡天命机缘",
+    "slug": "都市-仙尊归来-开局截胡天命机缘",
+    "genre": "都市",
+    "subgenres": [
+      "修仙",
+      "都市修真",
+      "无敌流"
+    ],
+    "target_words": 2000000,
+    "target_chapters": 650,
+    "current_chapter": 50,
+    "completed_chapters": 49,
+    "current_volume": 2,
+    "total_words": 138025
+  },
+  "project_info": {
+    "title": "都市：仙尊归来，开局截胡天命机缘",
+    "genre": "都市",
+    "protagonist_name": "陆辰",
+    "protagonist_desire": "夺尽灵物重登仙尊果位，庇护至亲至爱",
+    "protagonist_flaw": "视凡人权谋为草芥，行事过于霸道",
+    "golden_finger_type": "仙尊重生",
+    "world_scale": "多界",
+    "power_system_type": "修仙体系"
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "重返人间，仙尊之怒",
+      "filename": "第0001章-重返人间，仙尊之怒.md",
+      "volume": 1,
+      "char_count": 4203,
+      "status": "committed"
+    },
+    {
+      "chapter": 2,
+      "title": "黑心主任，血债血偿",
+      "filename": "第0002章-黑心主任，血债血偿.md",
+      "volume": 1,
+      "char_count": 3586,
+      "status": "committed"
+    },
+    {
+      "chapter": 3,
+      "title": "九转还魂，指尖惊雷",
+      "filename": "第0003章-九转还魂，指尖惊雷.md",
+      "volume": 1,
+      "char_count": 2701,
+      "status": "committed"
+    },
+    {
+      "chapter": 4,
+      "title": "一亿黑卡，云顶借道",
+      "filename": "第0004章-一亿黑卡，云顶借道.md",
+      "volume": 1,
+      "char_count": 3449,
+      "status": "committed"
+    },
+    {
+      "chapter": 5,
+      "title": "杀意沸腾，剑指赵家",
+      "filename": "第0005章-杀意沸腾，剑指赵家.md",
+      "volume": 1,
+      "char_count": 3070,
+      "status": "committed"
+    },
+    {
+      "chapter": 6,
+      "title": "玉石布阵，卧龙引气",
+      "filename": "第0006章-玉石布阵，卧龙引气.md",
+      "volume": 1,
+      "char_count": 2709,
+      "status": "committed"
+    },
+    {
+      "chapter": 7,
+      "title": "脱胎换骨，毒素尽褪",
+      "filename": "第0007章-脱胎换骨，毒素尽褪.md",
+      "volume": 1,
+      "char_count": 2347,
+      "status": "committed"
+    },
+    {
+      "chapter": 8,
+      "title": "凝水成冰，杀意如刀",
+      "filename": "第0008章-凝水成冰，杀意如刀.md",
+      "volume": 1,
+      "char_count": 2708,
+      "status": "committed"
+    },
+    {
+      "chapter": 9,
+      "title": "血色快递，七日之期",
+      "filename": "第0009章-血色快递，七日之期.md",
+      "volume": 1,
+      "char_count": 2476,
+      "status": "committed"
+    },
+    {
+      "chapter": 10,
+      "title": "百年老店，当众打脸",
+      "filename": "第0010章-百年老店，当众打脸.md",
+      "volume": 1,
+      "char_count": 4023,
+      "status": "committed"
+    },
+    {
+      "chapter": 11,
+      "title": "砂锅熬药，洗髓伐骨",
+      "filename": "第0011章-砂锅熬药，洗髓伐骨.md",
+      "volume": 1,
+      "char_count": 2449,
+      "status": "committed"
+    },
+    {
+      "chapter": 12,
+      "title": "玄阴之体，传授道法",
+      "filename": "第0012章-玄阴之体，传授道法.md",
+      "volume": 1,
+      "char_count": 2595,
+      "status": "committed"
+    },
+    {
+      "chapter": 13,
+      "title": "登门求药，延寿仙方",
+      "filename": "第0013章-登门求药，延寿仙方.md",
+      "volume": 1,
+      "char_count": 2612,
+      "status": "committed"
+    },
+    {
+      "chapter": 14,
+      "title": "权贵疯狂，逆风翻盘",
+      "filename": "第0014章-权贵疯狂，逆风翻盘.md",
+      "volume": 1,
+      "char_count": 3073,
+      "status": "committed"
+    },
+    {
+      "chapter": 15,
+      "title": "狗急跳墙，暴熊夜出",
+      "filename": "第0015章-狗急跳墙，暴熊夜出.md",
+      "volume": 1,
+      "char_count": 2739,
+      "status": "committed"
+    },
+    {
+      "chapter": 16,
+      "title": "鼎炉骗局，黑市现身",
+      "filename": "第0016章-鼎炉骗局，黑市现身.md",
+      "volume": 1,
+      "char_count": 2642,
+      "status": "committed"
+    },
+    {
+      "chapter": 17,
+      "title": "残缺丹纹，生锈铜鼎",
+      "filename": "第0017章-残缺丹纹，生锈铜鼎.md",
+      "volume": 1,
+      "char_count": 2492,
+      "status": "committed"
+    },
+    {
+      "chapter": 18,
+      "title": "徒手掀车，单枪破阵",
+      "filename": "第0018章-徒手掀车，单枪破阵.md",
+      "volume": 1,
+      "char_count": 2484,
+      "status": "committed"
+    },
+    {
+      "chapter": 19,
+      "title": "暴熊臣服，江海变天",
+      "filename": "第0019章-暴熊臣服，江海变天.md",
+      "volume": 1,
+      "char_count": 2249,
+      "status": "committed"
+    },
+    {
+      "chapter": 20,
+      "title": "引火炼丹，破而后立",
+      "filename": "第0020章-引火炼丹，破而后立.md",
+      "volume": 1,
+      "char_count": 2499,
+      "status": "committed"
+    },
+    {
+      "chapter": 21,
+      "title": "龙有逆鳞，触之必死",
+      "filename": "第0021章-龙有逆鳞，触之必死.md",
+      "volume": 1,
+      "char_count": 3116,
+      "status": "committed"
+    },
+    {
+      "chapter": 22,
+      "title": "迎宾馆拍卖会，冤家路窄",
+      "filename": "第0022章-迎宾馆拍卖会，冤家路窄.md",
+      "volume": 1,
+      "char_count": 3381,
+      "status": "committed"
+    },
+    {
+      "chapter": 23,
+      "title": "五千万买一捧灰，空壳残药！",
+      "filename": "第0023章-五千万买一捧灰，空壳残药！.md",
+      "volume": 1,
+      "char_count": 2856,
+      "status": "committed"
+    },
+    {
+      "chapter": 24,
+      "title": "两指夹弹，宗门如狗",
+      "filename": "第0024章-两指夹弹，宗门如狗.md",
+      "volume": 1,
+      "char_count": 2222,
+      "status": "committed"
+    },
+    {
+      "chapter": 25,
+      "title": "神识御剑，凌空斩狙击",
+      "filename": "第0025章-神识御剑，凌空斩狙击.md",
+      "volume": 1,
+      "char_count": 1943,
+      "status": "committed"
+    },
+    {
+      "chapter": 26,
+      "title": "借脉引火，重铸惊鸿",
+      "filename": "第0026章-借脉引火，重铸惊鸿.md",
+      "volume": 1,
+      "char_count": 1867,
+      "status": "committed"
+    },
+    {
+      "chapter": 27,
+      "title": "万里追魂，隔空捏爆",
+      "filename": "第0027章-万里追魂，隔空捏爆.md",
+      "volume": 1,
+      "char_count": 2295,
+      "status": "committed"
+    },
+    {
+      "chapter": 28,
+      "title": "赵家绝路，半步宗师降临",
+      "filename": "第0028章-赵家绝路，半步宗师降临.md",
+      "volume": 1,
+      "char_count": 1286,
+      "status": "committed"
+    },
+    {
+      "chapter": 29,
+      "title": "蝼蚁观天，一指破法",
+      "filename": "第0029章-蝼蚁观天，一指破法.md",
+      "volume": 1,
+      "char_count": 1647,
+      "status": "committed"
+    },
+    {
+      "chapter": 30,
+      "title": "飞剑惊鸿，血洗满门",
+      "filename": "第0030章-飞剑惊鸿，血洗满门.md",
+      "volume": 1,
+      "char_count": 1195,
+      "status": "committed"
+    },
+    {
+      "chapter": 31,
+      "title": "卷末余波，阴阳造化",
+      "filename": "第0031章-卷末余波，阴阳造化.md",
+      "volume": 1,
+      "char_count": 969,
+      "status": "committed"
+    },
+    {
+      "chapter": 32,
+      "title": "灵药残渣与灵辰集团",
+      "filename": "第0032章-灵药残渣与灵辰集团.md",
+      "volume": 2,
+      "char_count": 3161,
+      "status": "committed"
+    },
+    {
+      "chapter": 33,
+      "title": "血色拜帖，全城封杀",
+      "filename": "第0033章-血色拜帖，全城封杀.md",
+      "volume": 2,
+      "char_count": 2228,
+      "status": "committed"
+    },
+    {
+      "chapter": 34,
+      "title": "一滴培元液，省城叶家惊坐起",
+      "filename": "第0034章-一滴培元液，省城叶家惊坐起.md",
+      "volume": 2,
+      "char_count": 4431,
+      "status": "committed"
+    },
+    {
+      "chapter": 35,
+      "title": "江南省城，叶家庄园。",
+      "filename": "第0035章-江南省城，叶家庄园。.md",
+      "volume": 2,
+      "char_count": 2582,
+      "status": "committed"
+    },
+    {
+      "chapter": 36,
+      "title": "叶家臣服，江南震动",
+      "filename": "第0036章-叶家臣服，江南震动.md",
+      "volume": 2,
+      "char_count": 2853,
+      "status": "committed"
+    },
+    {
+      "chapter": 37,
+      "title": "黑榜幽灵，金陵风云起",
+      "filename": "第0037章-黑榜幽灵，金陵风云起.md",
+      "volume": 2,
+      "char_count": 2331,
+      "status": "committed"
+    },
+    {
+      "chapter": 38,
+      "title": "踏足金陵，群雄汇聚拍卖场",
+      "filename": "第0038章-踏足金陵，群雄汇聚拍卖场.md",
+      "volume": 2,
+      "char_count": 3448,
+      "status": "committed"
+    },
+    {
+      "chapter": 39,
+      "title": "大宗师？一剑斩之！",
+      "filename": "第0039章-大宗师？一剑斩之！.md",
+      "volume": 2,
+      "char_count": 4634,
+      "status": "committed"
+    },
+    {
+      "chapter": 40,
+      "title": "朱雀夜探，云顶迷阵",
+      "filename": "第0040章-朱雀夜探，云顶迷阵.md",
+      "volume": 2,
+      "char_count": 3406,
+      "status": "committed"
+    },
+    {
+      "chapter": 41,
+      "title": "国之利刃？不堪一击",
+      "filename": "第0041章-国之利刃？不堪一击.md",
+      "volume": 2,
+      "char_count": 3151,
+      "status": "committed"
+    },
+    {
+      "chapter": 42,
+      "title": "筑基神迹，军方折服",
+      "filename": "第0042章-筑基神迹，军方折服.md",
+      "volume": 2,
+      "char_count": 2841,
+      "status": "committed"
+    },
+    {
+      "chapter": 43,
+      "title": "江海第一人，赴约金陵",
+      "filename": "第0043章-江海第一人，赴约金陵.md",
+      "volume": 2,
+      "char_count": 2804,
+      "status": "committed"
+    },
+    {
+      "chapter": 44,
+      "title": "秦淮夜雨，血染金陵",
+      "filename": "第0044章-秦淮夜雨，血染金陵.md",
+      "volume": 2,
+      "char_count": 3138,
+      "status": "committed"
+    },
+    {
+      "chapter": 45,
+      "title": "拔剑，斩宗师",
+      "filename": "第0045章-拔剑，斩宗师.md",
+      "volume": 2,
+      "char_count": 3040,
+      "status": "committed"
+    },
+    {
+      "chapter": 46,
+      "title": "余波震荡，燕京震怖",
+      "filename": "第0046章-余波震荡，燕京震怖.md",
+      "volume": 2,
+      "char_count": 3731,
+      "status": "committed"
+    },
+    {
+      "chapter": 47,
+      "title": "暗影潜江，狙击神话",
+      "filename": "第0047章-暗影潜江，狙击神话.md",
+      "volume": 2,
+      "char_count": 3021,
+      "status": "committed"
+    },
+    {
+      "chapter": 48,
+      "title": "战术温压弹，袖里乾坤",
+      "filename": "第0048章-战术温压弹，袖里乾坤.md",
+      "volume": 2,
+      "char_count": 3800,
+      "status": "committed"
+    },
+    {
+      "chapter": 49,
+      "title": "搜魂夺魄，洪门秘辛",
+      "filename": "第0049章-搜魂夺魄，洪门秘辛.md",
+      "volume": 2,
+      "char_count": 3542,
+      "status": "committed"
+    }
+  ],
+  "active_chapter": {
+    "chapter_num": 50,
+    "title": "踏浪登轮，一指断臂",
+    "stage": "prewrite",
+    "status": "ready"
+  },
+  "progress": {
+    "target_words": 2000000,
+    "target_chapters": 650,
+    "current_words": 138025,
+    "completed_chapters": 49,
+    "current_chapter": 50,
+    "current_volume": 2,
+    "percent": 6.9
+  },
+  "timeline": {
+    "current_time_anchor": "都市末法时代 / 秋季午后两点 / 距公海决战3日",
+    "current_location": "江海市云顶一号山顶别墅"
+  },
+  "latest_commit": {
+    "chapter": 49,
+    "status": "accepted",
+    "title": "搜魂夺魄，洪门秘辛"
+  }
+}

@@ -1,0 +1,20 @@
+# Environment & Secrets (NEVER COMMIT SENSITIVE DATA)
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials*
+secrets*
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# System and temporary caches
+.webnovel/tmp/
+.webnovel/backups/
+.DS_Store
+Thumbs.db

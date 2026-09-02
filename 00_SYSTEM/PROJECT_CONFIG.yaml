@@ -1,0 +1,35 @@
+schema_version: "2.1"
+
+project:
+  title: "都市：仙尊归来，开局截胡天命机缘"
+  genre: "都市修仙"
+  subgenres:
+    - "无敌流"
+    - "都市修真"
+    - "杀伐果断"
+  target_total_words: 2000000
+  target_chapters: 650
+  current_volume: 2
+  status: "IN_PRODUCTION"
+
+# 字数配置 (CONFIGURABLE)
+chapter_word_count:
+  configurable: true
+  default_min: 2000
+  default_max: 3500
+  target_optimal: 2800
+
+# 平台与质量硬性约束
+quality_constraints:
+  dialogue_ratio_max: 0.40
+  talk_no_jutsu_forbidden: true
+  min_qa_score: 85
+  anti_ai_banned_words_enforced: true
+
+# 目录与映射配置
+paths:
+  canon_source: "设定集"
+  outline_source: "大纲"
+  prose_source: "正文"
+  state_source: "04_STATE"
+  legacy_mirror_enabled: true

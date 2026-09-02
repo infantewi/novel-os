@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "chapter": 49,
+  "title": "搜魂夺魄，洪门秘辛",
+  "status": "accepted",
+  "blocking_count": 0,
+  "missed_nodes": [],
+  "projections": {
+    "state": "done",
+    "index": "done",
+    "summary": "done",
+    "memory": "done",
+    "vector": "skipped"
+  }
+}
