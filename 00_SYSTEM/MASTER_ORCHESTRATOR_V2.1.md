@@ -160,3 +160,18 @@ DRAFT ──> LIEFLAT / TONE EDIT ──> DIFF INTEGRITY GATE ──> FINAL
 
 - **检查项**：删减比例（Deletion Ratio）、增补比例（Addition Ratio）、实体丢失、数值篡改、情节事件遗漏、核心对话丢失、段落篡改。
 - **裁决法则**：若润色过程改变了情节走向、削弱了冲突力度或发生实质性事实篡改，**直接判定 FAIL，并自动回滚至 DRAFT 状态**。
+
+---
+
+## 11. 下一章授权协议自动更新工序 (Next-Chapter Authorization Protocol SOP)
+
+每章正式定稿并提交原子状态（State Commit & Handoff）后，Master Orchestrator 必须自动执行下一章授权协议的生成与更新：
+
+1. **模版读取**：从 [`00_SYSTEM/UNIVERSAL_CHAPTER_PRODUCTION_AUTHORIZATION_TEMPLATE.md`](file:///D:/Ai%20work/novel/00_SYSTEM/UNIVERSAL_CHAPTER_PRODUCTION_AUTHORIZATION_TEMPLATE.md) 载入通用协议模版。
+2. **大纲解析**：读取大纲中下一章（Chapter N+1）的规划序号与官方标题。
+3. **精准填充**：**仅修改第 0 节中的 `Chapter` 与 `Title`**，其余 27 项门禁条款、权限法则与工作流格式必须 **100% 严格保真，严禁变动**。
+4. **物料生成**：
+   - 写入章节归档文件：`00_SYSTEM/CHAPTER_{XXXX}_PRODUCTION_AUTHORIZATION.md`
+   - 覆盖最新指针文件：`00_SYSTEM/NEXT_CHAPTER_AUTHORIZATION.md`
+5. **安全熔断**：完成物料生成后立即执行 **HARD STOP**，状态置为 `STANDBY_FOR_CHAPTER_{N+1}_AUTHORIZATION`，严禁自动推进写作，挂起等待 Human 下一次明确授权。
+
