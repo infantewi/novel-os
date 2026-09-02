@@ -1,6 +1,6 @@
 project: 《都市：仙尊归来，开局截胡天命机缘》
 phase: PHASE_2C_FULL_MEMORY_BACKFILL
-status: BATCH_02_COMPLETE_WAITING_HUMAN_APPROVAL
+status: BATCH_03_COMPLETE_WAITING_HUMAN_APPROVAL
 batches:
 - id: BATCH-01
   chapters: CH001-CH010
@@ -83,14 +83,41 @@ batches:
   retrieval_pass_rate: 100.0%
   checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_02_REPORT.md
   status: ACCEPTED_PENDING_HUMAN_GATE
+- id: BATCH-03
+  chapters: CH021-CH030
+  source_hashes:
+    CH021_第0021章-龙有逆鳞，触之必死.md: 4cfc30b8fb3413b2ff963fd853cc4a8ed25eaf3a662fd85282bac44306de8b0e
+    CH022_第0022章-迎宾馆拍卖会，冤家路窄.md: 03388491aa311602a555b3f21c978198ab7cb17effab36da7b3fc1dfbb2da612
+    CH023_第0023章-五千万买一捧灰，空壳残药！.md: e547c8c9fdaa956ecc42abf89f853e4b18cd63a1d9809f1621df464ca21fc60f
+    CH024_第0024章-两指夹弹，宗门如狗.md: ca751a496288e66ec998be7a97e7bff8874d352089663a0ed202a2ede6339998
+    CH025_第0025章-神识御剑，凌空斩狙击.md: 213a7cc2ac56e7a97c2716a9d3db1332e0ebfa4ed14fa6bfcfe73e6c40b50de2
+    CH026_第0026章-借脉引火，重铸惊鸿.md: 7177690a1095d11dcba5fa69f773cd0d7fb047bd92cf52cf5e1d1ed76de8db1f
+    CH027_第0027章-万里追魂，隔空捏爆.md: 5bd06843df5ef95dce6359cf37cfb9406472d3836ed5926de3fa029ae1016d3b
+    CH028_第0028章-赵家绝路，半步宗师降临.md: 983f8808a69546e74feccd37676ec47bbed14b03e6a1b6a4593bbbbc3948e9f1
+    CH029_第0029章-蝼蚁观天，一指破法.md: 80aa56a6f54d74bb99ddf4a83d2c00c08e7cb61d60fd99fcbab3eb1d34bd98c0
+    CH030_第0030章-飞剑惊鸿，血洗满门.md: 6ca92c29bb7448dfc918cf5bfd8fadddee3b05a36f940f790c82e8428fd7da91
+  candidate_count: 26
+  accepted_count: 26
+  rejected_count: 0
+  conflicts: 0
+  duplicates: 0
+  boundary_blocks: 0
+  quality_distribution:
+    A: 26
+    B: 0
+    C: 0
+    REJECT: 0
+  retrieval_pass_rate: 100.0%
+  checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_03_REPORT.md
+  status: ACCEPTED_PENDING_HUMAN_GATE
 global:
-  total_candidates: 79
-  total_accepted: 78
+  total_candidates: 105
+  total_accepted: 104
   total_rejected: 0
   total_conflicts: 0
   total_duplicates: 0
   total_boundary_blocks: 0
-  total_memory_nodes: 78
-  retrieval_tests: 36
+  total_memory_nodes: 104
+  retrieval_tests: 48
   retrieval_pass_rate: 100.0%
   integrity_status: PASS
