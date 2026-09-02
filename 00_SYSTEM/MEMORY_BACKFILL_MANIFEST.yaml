@@ -1,6 +1,6 @@
 project: 《都市：仙尊归来，开局截胡天命机缘》
 phase: PHASE_2C_FULL_MEMORY_BACKFILL
-status: BATCH_01_COMPLETE_WAITING_HUMAN_APPROVAL
+status: BATCH_02_COMPLETE_WAITING_HUMAN_APPROVAL
 batches:
 - id: BATCH-01
   chapters: CH001-CH010
@@ -29,14 +29,68 @@ batches:
   retrieval_pass_rate: 100.0%
   checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_01_REPORT.md
   status: ACCEPTED_PENDING_HUMAN_GATE
+- id: BATCH-02
+  chapters: CH011-CH020
+  source_hashes:
+    CH011_第0011章-砂锅熬药，洗髓伐骨.md: f7ed540aee04076e6813070662692969c10d03e63f0d530983acaa4b6313c64c
+    CH012_第0012章-玄阴之体，传授道法.md: 342354d068f395bcd618eb12918c946bc37b9788522292e8f09e0cefd05c0ac5
+    CH013_第0013章-登门求药，延寿仙方.md: 2c6593be4324e7e9cd5fb68a7cb7e301cf3787ba1c2bcb204cbca0ca6763d888
+    CH014_第0014章-权贵疯狂，逆风翻盘.md: 8412152021cc55444816e5e9f28a672100540b405389d40412a9cd0b0d853851
+    CH015_第0015章-狗急跳墙，暴熊夜出.md: 89b77799ddade4d3362b78e1da2bca2313e9c02241259ebb384c9415615fbb0f
+    CH016_第0016章-鼎炉骗局，黑市现身.md: 64848f37d982e7d9d3f9742d74c8d1b0dd77e4f96a17d97930a7428600026bf6
+    CH017_第0017章-残缺丹纹，生锈铜鼎.md: 42c822472c1790ca9eb6f11d0acd5b1e637160bfef35ea64a27f1e150ed0febd
+    CH018_第0018章-徒手掀车，单枪破阵.md: 79d913cc0baaaeaebc7bb0a37890de892403060fdd726f81f43f41aac29a759d
+    CH019_第0019章-暴熊臣服，江海变天.md: d604b17bdbf171615165f472212a845c3afe75cbe8dfa6c449a6d7eae745fdad
+    CH020_第0020章-引火炼丹，破而后立.md: 77bc9675f721100d171e72acc14275c68e3e8ba6f02ec9e85acd949a341c6d81
+  candidate_count: 26
+  accepted_count: 25
+  rejected_count: 0
+  conflicts: 1
+  duplicates: 0
+  boundary_blocks: 0
+  quality_distribution:
+    A: 26
+    B: 0
+    C: 0
+    REJECT: 0
+  retrieval_pass_rate: 100.0%
+  checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_02_REPORT.md
+  status: ACCEPTED_PENDING_HUMAN_GATE
+- id: BATCH-02
+  chapters: CH011-CH020
+  source_hashes:
+    CH011_第0011章-砂锅熬药，洗髓伐骨.md: f7ed540aee04076e6813070662692969c10d03e63f0d530983acaa4b6313c64c
+    CH012_第0012章-玄阴之体，传授道法.md: 342354d068f395bcd618eb12918c946bc37b9788522292e8f09e0cefd05c0ac5
+    CH013_第0013章-登门求药，延寿仙方.md: 2c6593be4324e7e9cd5fb68a7cb7e301cf3787ba1c2bcb204cbca0ca6763d888
+    CH014_第0014章-权贵疯狂，逆风翻盘.md: 8412152021cc55444816e5e9f28a672100540b405389d40412a9cd0b0d853851
+    CH015_第0015章-狗急跳墙，暴熊夜出.md: 89b77799ddade4d3362b78e1da2bca2313e9c02241259ebb384c9415615fbb0f
+    CH016_第0016章-鼎炉骗局，黑市现身.md: 64848f37d982e7d9d3f9742d74c8d1b0dd77e4f96a17d97930a7428600026bf6
+    CH017_第0017章-残缺丹纹，生锈铜鼎.md: 42c822472c1790ca9eb6f11d0acd5b1e637160bfef35ea64a27f1e150ed0febd
+    CH018_第0018章-徒手掀车，单枪破阵.md: 79d913cc0baaaeaebc7bb0a37890de892403060fdd726f81f43f41aac29a759d
+    CH019_第0019章-暴熊臣服，江海变天.md: d604b17bdbf171615165f472212a845c3afe75cbe8dfa6c449a6d7eae745fdad
+    CH020_第0020章-引火炼丹，破而后立.md: 77bc9675f721100d171e72acc14275c68e3e8ba6f02ec9e85acd949a341c6d81
+  candidate_count: 26
+  accepted_count: 26
+  rejected_count: 0
+  conflicts: 0
+  duplicates: 0
+  boundary_blocks: 0
+  quality_distribution:
+    A: 26
+    B: 0
+    C: 0
+    REJECT: 0
+  retrieval_pass_rate: 100.0%
+  checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_02_REPORT.md
+  status: ACCEPTED_PENDING_HUMAN_GATE
 global:
-  total_candidates: 27
-  total_accepted: 27
+  total_candidates: 79
+  total_accepted: 78
   total_rejected: 0
   total_conflicts: 0
   total_duplicates: 0
   total_boundary_blocks: 0
-  total_memory_nodes: 27
-  retrieval_tests: 12
+  total_memory_nodes: 78
+  retrieval_tests: 36
   retrieval_pass_rate: 100.0%
   integrity_status: PASS
