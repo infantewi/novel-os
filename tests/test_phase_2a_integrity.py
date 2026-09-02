@@ -143,13 +143,18 @@ class TestPhase2AIntegrity(unittest.TestCase):
         self.assertIn("hook_status: \"ACTIVE\"", h26_01)
 
     def test_12_authority_direction(self):
-        """TEST-12: Every note in vault must declare authority: NOVEL_OS and sync_mode: READ_ONLY."""
+        """TEST-12: Every note in vault must declare valid authority (NOVEL_OS for mirror, HUMAN_PROPOSAL for proposals)."""
         for md in VAULT.rglob("*.md"):
             txt = md.read_text(encoding="utf-8")
             self.assertTrue(txt.startswith("---"), f"{md.name} missing frontmatter")
-            self.assertIn("authority: NOVEL_OS", txt, f"{md.name} missing NOVEL_OS authority")
-            self.assertIn("sync_mode: READ_ONLY", txt, f"{md.name} missing READ_ONLY sync_mode")
+            if "16_proposals" in str(md).lower():
+                self.assertIn("authority: HUMAN_PROPOSAL", txt, f"{md.name} missing HUMAN_PROPOSAL authority")
+                self.assertIn("sync_mode: PROPOSAL_ONLY", txt, f"{md.name} missing PROPOSAL_ONLY sync_mode")
+            else:
+                self.assertIn("authority: NOVEL_OS", txt, f"{md.name} missing NOVEL_OS authority")
+                self.assertIn("sync_mode: READ_ONLY", txt, f"{md.name} missing READ_ONLY sync_mode")
             self.assertNotIn("authority: obsidian", txt.lower(), f"{md.name} illegal authority")
+
 
 
 if __name__ == "__main__":

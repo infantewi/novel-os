@@ -5,5 +5,13 @@ from .mapper import VaultMapper
 from .validator import MirrorValidator
 from .manifest import MirrorManifest
 from .exporter import VaultExporter
+from .proposals import ProposalManager
 
-__all__ = ["VaultMapper", "MirrorValidator", "MirrorManifest", "VaultExporter"]
+__all__ = [
+    "VaultMapper",
+    "MirrorValidator",
+    "MirrorManifest",
+    "VaultExporter",
+    "ProposalManager"
+]
+

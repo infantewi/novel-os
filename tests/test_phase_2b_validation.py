@@ -92,13 +92,18 @@ class TestPhase2BValidation(unittest.TestCase):
 
     # --- P2B-GATE-04: Read-Only Enforcement ---
     def test_gate_04_read_only_enforcement(self):
-        """P2B-GATE-04: Verify all markdown files have mandatory read-only frontmatter."""
+        """P2B-GATE-04: Verify all markdown files have mandatory frontmatter and appropriate authority."""
         for md_file in VAULT.rglob("*.md"):
             txt = md_file.read_text(encoding="utf-8")
             self.assertTrue(txt.startswith("---"), f"Missing frontmatter in {md_file}")
-            self.assertIn("authority: NOVEL_OS", txt, f"Missing authority in {md_file}")
-            self.assertIn("sync_mode: READ_ONLY", txt, f"Missing sync_mode in {md_file}")
-            self.assertIn("editable_in_obsidian: false", txt, f"Missing editable_in_obsidian in {md_file}")
+            if "16_proposals" in str(md_file).lower():
+                self.assertIn("authority: HUMAN_PROPOSAL", txt, f"Missing HUMAN_PROPOSAL in {md_file}")
+                self.assertIn("sync_mode: PROPOSAL_ONLY", txt, f"Missing PROPOSAL_ONLY in {md_file}")
+            else:
+                self.assertIn("authority: NOVEL_OS", txt, f"Missing authority in {md_file}")
+                self.assertIn("sync_mode: READ_ONLY", txt, f"Missing sync_mode in {md_file}")
+                self.assertIn("editable_in_obsidian: false", txt, f"Missing editable_in_obsidian in {md_file}")
+
 
     # --- P2B-GATE-05: Hash Integrity ---
     def test_gate_05_hash_integrity(self):
