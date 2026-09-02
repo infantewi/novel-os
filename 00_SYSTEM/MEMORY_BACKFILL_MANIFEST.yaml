@@ -1,0 +1,42 @@
+project: 《都市：仙尊归来，开局截胡天命机缘》
+phase: PHASE_2C_FULL_MEMORY_BACKFILL
+status: BATCH_01_COMPLETE_WAITING_HUMAN_APPROVAL
+batches:
+- id: BATCH-01
+  chapters: CH001-CH010
+  source_hashes:
+    CH001_第0001章-重返人间，仙尊之怒.md: 5629fcad60a73c9438b1b6f4399a20dbea5fb5b9bccc7763bc4210589590b8c8
+    CH002_第0002章-黑心主任，血债血偿.md: 993eee544924b3bc601c07a01179d555cf21ac43c53f109146894a9983107344
+    CH003_第0003章-九转还魂，指尖惊雷.md: 53d422c52b28f1ae2e7d64a11c35d76e81ee1dfafd4266f3db988ad4b4375947
+    CH004_第0004章-一亿黑卡，云顶借道.md: 97082501368b0d9975fee3d5d4b82924762ce9e067d276a90c89338e396e729f
+    CH005_第0005章-杀意沸腾，剑指赵家.md: d9c04d5446bb31b1a0b95d34f36a1edad233173ea2c362b91a9ef8057540b245
+    CH006_第0006章-玉石布阵，卧龙引气.md: 8b45ffd8f9bbe762668b4b1de63f6ae2fc1864f3cd13d184cb114a425219e481
+    CH007_第0007章-脱胎换骨，毒素尽褪.md: fe9ca73232dc95344a198d1f1d38d943428a1e53a24a02dc475108aedd783756
+    CH008_第0008章-凝水成冰，杀意如刀.md: 716749d54ae4242be031ecf7236ff21cfad79526835f06d4745839eb478a1f9b
+    CH009_第0009章-血色快递，七日之期.md: 0bcdb45361d357a83c730238ec2e2bde354d4a84a40c1433ebc5b2f122c54773
+    CH010_第0010章-百年老店，当众打脸.md: e28b962b044d41c731e8b05c18c56acd21699a63e21a8b143a25f13841465c3f
+  candidate_count: 27
+  accepted_count: 27
+  rejected_count: 0
+  conflicts: 0
+  duplicates: 0
+  boundary_blocks: 0
+  quality_distribution:
+    A: 27
+    B: 0
+    C: 0
+    REJECT: 0
+  retrieval_pass_rate: 100.0%
+  checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_01_REPORT.md
+  status: ACCEPTED_PENDING_HUMAN_GATE
+global:
+  total_candidates: 27
+  total_accepted: 27
+  total_rejected: 0
+  total_conflicts: 0
+  total_duplicates: 0
+  total_boundary_blocks: 0
+  total_memory_nodes: 27
+  retrieval_tests: 12
+  retrieval_pass_rate: 100.0%
+  integrity_status: PASS

@@ -9,6 +9,7 @@ from .permission import MemoryPermissionGate
 from .provenance import ProvenanceTracker
 from .commit_gate import AtomicCommitGate
 from .governor import NovelMemoryGovernor
+from .quality_gate import MemoryQualityGate, QualityEvaluation
 
 __all__ = [
     "MemoryDelta",
@@ -24,4 +25,6 @@ __all__ = [
     "ProvenanceTracker",
     "AtomicCommitGate",
     "NovelMemoryGovernor",
+    "MemoryQualityGate",
+    "QualityEvaluation",
 ]
