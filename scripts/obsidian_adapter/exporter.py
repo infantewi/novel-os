@@ -15,10 +15,11 @@ from .manifest import MirrorManifest
 
 
 class VaultExporter:
-    def __init__(self, source_root: Path, vault_root: Path, temp_root: Path):
+    def __init__(self, source_root: Path, vault_root: Path, temp_root: Path, sync_time: str = None):
         self.source_root = source_root
         self.vault_root = vault_root
         self.temp_root = temp_root
+        self.sync_time = sync_time or datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
     def export_all(self) -> Dict[str, Any]:
         """Executes the full atomic mirror pipeline."""
@@ -97,7 +98,7 @@ class VaultExporter:
                 shutil.copy2(src_file, dest_file)
 
         print("[EXPORTER] Generating Mirror Manifest...")
-        manifest_data = MirrorManifest.generate_manifest(self.source_root, self.vault_root)
+        manifest_data = MirrorManifest.generate_manifest(self.source_root, self.vault_root, sync_time=self.sync_time)
 
         print("[EXPORTER] Validating final vault...")
         v_ok, v_errs = MirrorValidator.validate_vault(self.vault_root)
@@ -109,10 +110,13 @@ class VaultExporter:
 
     def _write_file(self, category: str, filename: str, metadata: Dict[str, Any], content: str):
         file_path = self.temp_root / category / filename
+        if "generated_at" not in metadata:
+            metadata["generated_at"] = self.sync_time
         fm = VaultMapper.format_frontmatter(metadata)
         body = content.strip()
         full_text = f"{fm}\n\n{body}\n"
         file_path.write_text(full_text, encoding="utf-8")
+
 
     def _export_home(self):
         meta = {"title": "NOVEL OS 生产监控与视觉评审看板", "category": "00_HOME"}

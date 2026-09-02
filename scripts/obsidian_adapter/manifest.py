@@ -12,12 +12,12 @@ class MirrorManifest:
     """Tracks exported mirror files and hashes."""
 
     @classmethod
-    def generate_manifest(cls, source_root: Path, vault_root: Path) -> Dict[str, Any]:
+    def generate_manifest(cls, source_root: Path, vault_root: Path, sync_time: str = None) -> Dict[str, Any]:
         manifest_data = {
             "source_root": str(source_root).replace("\\", "/"),
             "vault_root": str(vault_root).replace("\\", "/"),
             "sync_mode": "READ_ONLY",
-            "last_sync": time.strftime("%Y-%m-%dT%H:%M:%S"),
+            "last_sync": sync_time or time.strftime("%Y-%m-%dT%H:%M:%S"),
             "canon_version": "2.1.0",
             "state_version": "2.1.0",
             "memory_version": "2.2.0",
@@ -26,6 +26,7 @@ class MirrorManifest:
             "source_hashes": {},
             "mirror_hashes": {}
         }
+
 
         # Track key source hashes
         key_source_files = [
