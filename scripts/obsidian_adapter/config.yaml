@@ -1,0 +1,33 @@
+schema_version: "2.3.0"
+sync_mode: "READ_ONLY"
+source_root: "D:/Ai work/novel"
+vault_root: "D:/Ai work/novel/NOVEL_OS_VAULT"
+manifest_path: "D:/Ai work/novel/NOVEL_OS_VAULT/99_SYSTEM/MIRROR_MANIFEST.yaml"
+
+default_frontmatter:
+  source: "NOVEL_OS"
+  authority: "NOVEL_OS"
+  sync_mode: "READ_ONLY"
+  editable_in_obsidian: false
+  canon_version: "2.1.0"
+  state_version: "2.1.0"
+  memory_version: "2.2.0"
+
+vault_directories:
+  - "00_HOME"
+  - "01_CANON"
+  - "02_CHARACTERS"
+  - "03_RELATIONSHIPS"
+  - "04_TIMELINE"
+  - "05_LOCATIONS"
+  - "06_FACTIONS"
+  - "07_ABILITIES"
+  - "08_ITEMS"
+  - "09_FORESHADOWING"
+  - "10_CHAPTERS"
+  - "11_ARCS"
+  - "12_STATE"
+  - "13_HANDOFF"
+  - "14_MEMORY"
+  - "15_QA"
+  - "99_SYSTEM"
