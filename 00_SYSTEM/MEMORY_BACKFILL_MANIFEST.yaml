@@ -1,6 +1,6 @@
 project: 《都市：仙尊归来，开局截胡天命机缘》
 phase: PHASE_2C_FULL_MEMORY_BACKFILL
-status: BATCH_03_COMPLETE_WAITING_HUMAN_APPROVAL
+status: BATCH_04_COMPLETE_WAITING_HUMAN_APPROVAL
 batches:
 - id: BATCH-01
   chapters: CH001-CH010
@@ -110,14 +110,41 @@ batches:
   retrieval_pass_rate: 100.0%
   checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_03_REPORT.md
   status: ACCEPTED_PENDING_HUMAN_GATE
+- id: BATCH-04
+  chapters: CH031-CH040
+  source_hashes:
+    CH031_第0031章-卷末余波，阴阳造化.md: 9472603850099f8a5be1366364868a2ac3a1273801a3f6e067a25ce046de34e5
+    CH032_第0032章-灵药残渣与灵辰集团.md: 0c4e7af7cd4c5490634f2f32b7dd9c34ccd8e987f7af19ed2384852c466a3e12
+    CH033_第0033章-血色拜帖，全城封杀.md: 2d9351f28ba9d11da59c074f6324d9b51b2adc75cec3caaf0d72a8b85dad94ec
+    CH034_第0034章-一滴培元液，省城叶家惊坐起.md: 2d0398a21629fde8f703a0087c3508d694649f6acc6c89a73d8fe82adc19feb3
+    CH035_第0035章-江南省城，叶家庄园。.md: 7756b9ac0d3b9881583e4cf7d38f98815e3350380287adc66fa9bded0ec48926
+    CH036_第0036章-叶家臣服，江南震动.md: e30d8319d2504bacdfa442bef74ecaa8e018f0fe3d66330ab094ab63fb933f29
+    CH037_第0037章-黑榜幽灵，金陵风云起.md: 041dd2a67faf72c1b2d4e99b33e408ded5d8ef05674d3de2a8658176f93bb844
+    CH038_第0038章-踏足金陵，群雄汇聚拍卖场.md: c968ae6efd33e9a20ecb1139381c7450a7bfadcd5d5a24f4f6e173bb3b140885
+    CH039_第0039章-大宗师？一剑斩之！.md: 139ca0e749fcd8cdad8273374c73adf01e310d913b8af4c6442a0d902f0b77d8
+    CH040_第0040章-朱雀夜探，云顶迷阵.md: 17e32aa86352265b6299dce160a2bfd0bc41029f616aeb67d05e3e7b549d2740
+  candidate_count: 26
+  accepted_count: 26
+  rejected_count: 0
+  conflicts: 0
+  duplicates: 0
+  boundary_blocks: 0
+  quality_distribution:
+    A: 26
+    B: 0
+    C: 0
+    REJECT: 0
+  retrieval_pass_rate: 100.0%
+  checkpoint: 00_SYSTEM/MEMORY_BACKFILL_BATCH_04_REPORT.md
+  status: ACCEPTED_PENDING_HUMAN_GATE
 global:
-  total_candidates: 105
-  total_accepted: 104
+  total_candidates: 131
+  total_accepted: 130
   total_rejected: 0
   total_conflicts: 0
   total_duplicates: 0
   total_boundary_blocks: 0
-  total_memory_nodes: 104
-  retrieval_tests: 48
+  total_memory_nodes: 130
+  retrieval_tests: 60
   retrieval_pass_rate: 100.0%
   integrity_status: PASS
