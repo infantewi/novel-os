@@ -1,21 +1,21 @@
-current_chapter: 51
-current_stage: COMPLETE
+current_chapter: 0
+current_stage: STANDBY
 failure_count: 0
-human_approval_required: false
-last_checkpoint: CH051_PRODUCTION_COMPLETE
-last_completed_chapter: 51
+human_approval_required: true
+last_checkpoint: null
+last_completed_chapter: 0
 pipeline_locks:
   active_agent: none
   write_lock: false
-production_status: STANDBY_FOR_CHAPTER_52
-project_status: INITIALIZED
+production_status: STANDBY_FOR_INITIAL_CHAPTER_AUTHORIZATION
+project_status: UNINITIALIZED
 risk_gate:
   hard_trigger: none
   level: LOW
   score: 0
 schema_version: '2.1'
-stage_status: SUCCESS
-total_words: 144519
+stage_status: READY
+total_words: 0
 workers:
   de_ai:
     last_active: null
@@ -26,10 +26,6 @@ workers:
     last_request_id: null
     status: IDLE
   oh_story:
-    last_active: null
-    last_request_id: null
-    status: IDLE
-  webnovel_writer:
     last_active: null
     last_request_id: null
     status: IDLE

@@ -1,0 +1,52 @@
+{
+  "file_path": "C:\\Users\\hairaito\\Desktop\\素材\\上帝们的那些事儿\\《上帝们的那些事儿》(全五卷·完整精校合订本).txt",
+  "detected_encoding": "utf-8",
+  "total_characters": 6005142,
+  "total_words": 4445877,
+  "total_chapters": 370,
+  "chapter_word_stats": {
+    "average": 12002.4,
+    "median": 8157.0,
+    "min": 1619,
+    "max": 262515,
+    "std_deviation": 19535.1
+  },
+  "dialogue_metrics": {
+    "total_dialogue_chars": 2190328,
+    "dialogue_percentage": 49.32
+  },
+  "ending_cliffhanger_distribution": {
+    "question": 7,
+    "exclamation": 11,
+    "ellipsis": 10,
+    "period": 112,
+    "other": 230
+  },
+  "first_5_chapters": [
+    {
+      "index": 1,
+      "title": "第一章 徐锋篇",
+      "words": 3028
+    },
+    {
+      "index": 2,
+      "title": "第一章 第零团队/高天峰线",
+      "words": 3745
+    },
+    {
+      "index": 3,
+      "title": "第二章 第一团队/阿真线",
+      "words": 2747
+    },
+    {
+      "index": 4,
+      "title": "第三章 单结信息集下的零和博弈",
+      "words": 3153
+    },
+    {
+      "index": 5,
+      "title": "第四章 策略空间与概率分布",
+      "words": 7056
+    }
+  ]
+}

@@ -14,7 +14,7 @@ import hashlib
 from pathlib import Path
 from typing import Dict, Any, List
 
-root = Path(r"D:\Ai work\novel")
+root = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(root))
 
 from memory.governor import (

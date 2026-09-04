@@ -1,0 +1,52 @@
+{
+  "file_path": "d:\\Ai work\\novel\\references\\raw_materials\\山那边的领主\\山那边的领主.txt",
+  "detected_encoding": "utf-8",
+  "total_characters": 2364905,
+  "total_words": 2036290,
+  "total_chapters": 533,
+  "chapter_word_stats": {
+    "average": 3806.1,
+    "median": 3735,
+    "min": 0,
+    "max": 10235,
+    "std_deviation": 974.8
+  },
+  "dialogue_metrics": {
+    "total_dialogue_chars": 526670,
+    "dialogue_percentage": 25.96
+  },
+  "ending_cliffhanger_distribution": {
+    "question": 2,
+    "exclamation": 23,
+    "ellipsis": 8,
+    "period": 239,
+    "other": 257
+  },
+  "first_5_chapters": [
+    {
+      "index": 1,
+      "title": "第一卷 南征记事",
+      "words": 4234
+    },
+    {
+      "index": 2,
+      "title": "第一章 祖父的故事1",
+      "words": 4390
+    },
+    {
+      "index": 3,
+      "title": "第二章 祖父的故事2",
+      "words": 4100
+    },
+    {
+      "index": 4,
+      "title": "第三章 祖父的故事3",
+      "words": 4175
+    },
+    {
+      "index": 5,
+      "title": "第四章 祖父的故事4",
+      "words": 3451
+    }
+  ]
+}

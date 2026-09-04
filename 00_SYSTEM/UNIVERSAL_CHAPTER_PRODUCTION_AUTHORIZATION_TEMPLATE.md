@@ -451,6 +451,9 @@ PREWRITE 至少明确：
 - 信息释放边界
 - 结尾状态
 - Ending Hook
+- 【雪花双螺旋场景切片 (Snowflake Scene Specification)】：
+  - 本章拆解为 1-2 个独立场景，每个场景锁定严格单一视点 (Strict Single POV)，严禁视角乱跳
+  - 明确场景模式：主动型 (目标 ➔ 阶梯冲突 ➔ 挫折结局[No/No+/Yes, but]) 或 反应型 (内脏生理反应 ➔ 两难困境 ➔ 进攻性决定)
 
 ---
 
@@ -469,6 +472,8 @@ CANON-AWARE NOVEL PRODUCTION WORKER
 - 严格遵守 Canon
 - 严格遵守当前 State
 - 严格遵守 Chapter Plan
+- 遵守雪花 7 大展示工具（高频调用动作、微表情、生理内脏反应、原声独白、感官细节，严禁抽象概括与说教）
+- 遵循 Swain MRU 刺激反应链（外部刺激 ➔ 生理反射 ➔ 动作 ➔ 言语独白，严禁因果倒错）
 - 保持人物性格连续
 - 保持力量体系连续
 - 保持时间线连续
@@ -543,6 +548,7 @@ Timeline_Consistency
 Relationship_Consistency
 State_Transition
 Foreshadowing_Consistency
+Scene_POV_Integrity
 ```
 
 ## HIGH
@@ -562,6 +568,10 @@ Timeline_Penetration
 Major_Event_Integrity
 Dialogue_Integrity
 Anti_Talk_No_Jutsu_Audit
+Scene_Disaster_Integrity
+Visceral_Reaction_Check
+Swain_MRU_Check
+Rejection_Reason_Screen
 ```
 
 ---

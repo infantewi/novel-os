@@ -1,0 +1,77 @@
+# NOVEL OS 核心参考知识库主索引总录 (MASTER REFERENCE CATALOG)
+
+version: "2.4"
+updated_at: "2026-09-04"
+total_reference_books: 5
+total_words_indexed: 13969983  # 约 1,400 万字宏观精萃知识
+
+catalog:
+  - id: "REF_001_URBAN_IMMORTAL"
+    title: "重生之都市修仙"
+    author: "十里剑神"
+    genre: "都市修仙 / 无敌流"
+    total_words: 3208064
+    dialogue_ratio: "25.89%"
+    core_organ: "极道爽感、强者神性俯视、30/45/25三段式反差配比、亲情筛选器"
+    applicable_genres:
+      - "都市修仙"
+      - "玄幻无敌流"
+      - "仙尊重生"
+      - "极道杀伐"
+    path: "07_REFERENCE_LIBRARY/REF_001_URBAN_IMMORTAL"
+
+  - id: "REF_002_MUSHOKU_TENSEI"
+    title: "无职转生 ～到了异世界就拿出真本事～"
+    author: "理不尽な孙の手"
+    genre: "西幻史诗 / 一生流 / 异世界转生"
+    total_words: 2564024
+    dialogue_ratio: "约 35%"
+    core_organ: "一生流生命周期八阶段结构、创伤恢复与救赎、真实人性灰度、家庭与配角深度羁绊"
+    applicable_genres:
+      - "西幻史诗"
+      - "异界穿越"
+      - "慢热成长流"
+      - "深刻人情群像"
+    path: "07_REFERENCE_LIBRARY/REF_002_MUSHOKU_TENSEI"
+
+  - id: "REF_003_GODS_AFFAIRS"
+    title: "上帝们的那些事儿"
+    author: "杨建东"
+    genre: "宏大科幻 / 幕后流 / 诸神编年史"
+    total_words: 4445877
+    dialogue_ratio: "49.32%"
+    core_organ: "高维上帝博弈、多战区多线程群像调度、极端信息差对抗、50%高密度辩论与智斗"
+    applicable_genres:
+      - "硬核科幻"
+      - "幕后黑手流"
+      - "多文明战争"
+      - "群像智斗博弈"
+    path: "07_REFERENCE_LIBRARY/REF_003_GODS_AFFAIRS"
+
+  - id: "REF_004_INFINITE_CHALLENGE"
+    title: "无限挑战游戏"
+    author: "唐三葬"
+    genre: "无限流 / 悬疑惊悚 / 规则怪谈"
+    total_words: 1715728
+    dialogue_ratio: "40.33%"
+    core_organ: "副本规则表面与潜伏杀机双轨设计、生死倒计时物理压迫、规则盲区智斗破局"
+    applicable_genres:
+      - "无限流"
+      - "惊悚悬疑"
+      - "规则怪谈"
+      - "末日密室逃生"
+    path: "07_REFERENCE_LIBRARY/REF_004_INFINITE_CHALLENGE"
+
+  - id: "REF_005_MEDIEVAL_LORD"
+    title: "山那边的领主"
+    author: "eskimol"
+    genre: "硬核中世纪 / 领主种田 / 家族史诗"
+    total_words: 2036290
+    dialogue_ratio: "25.96%"
+    core_organ: "封闭山谷拓荒、木工深加工第一桶金、封建法律绝嗣联姻、劳动力保卫战、中世纪真实物质与四季律动"
+    applicable_genres:
+      - "中世纪种田"
+      - "领主建设流"
+      - "骑砍/低魔争霸"
+      - "家族传承史诗"
+    path: "07_REFERENCE_LIBRARY/REF_005_MEDIEVAL_LORD"

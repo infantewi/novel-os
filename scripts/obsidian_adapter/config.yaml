@@ -1,8 +1,8 @@
 schema_version: "2.3.0"
 sync_mode: "READ_ONLY"
-source_root: "D:/Ai work/novel"
-vault_root: "D:/Ai work/novel/NOVEL_OS_VAULT"
-manifest_path: "D:/Ai work/novel/NOVEL_OS_VAULT/99_SYSTEM/MIRROR_MANIFEST.yaml"
+source_root: "."
+vault_root: "NOVEL_OS_VAULT"
+manifest_path: "NOVEL_OS_VAULT/99_SYSTEM/MIRROR_MANIFEST.yaml"
 
 default_frontmatter:
   source: "NOVEL_OS"

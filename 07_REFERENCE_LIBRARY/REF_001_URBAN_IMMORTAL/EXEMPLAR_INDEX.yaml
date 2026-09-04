@@ -1,0 +1,52 @@
+# REF_001 《重生之都市修仙》名场面技法标签索引 (EXEMPLAR INDEX)
+
+reference_id: "REF_001_URBAN_IMMORTAL"
+reference_book: "重生之都市修仙"
+author: "十里剑神"
+total_chapters: 1246
+total_words: 3208064
+
+exemplars:
+  - id: "EXEMP-01-PERSONA-DIVINE"
+    scene_name: "楚州宴会与名言立碑"
+    chapter_range: "CH027-CH030"
+    file: "slices/slice_01_persona_establishment_ch27_30.txt"
+    core_techniques:
+      - "反自证法则 (Anti-Self-Justification)"
+      - "神性降维俯视 (High-Dimension Demotion)"
+      - "一锤定音金句 (Decisive Signature Hook)"
+    best_dialogue: "我一生行事，何须向你解释？"
+    applicable_scenario: "主角面对世俗富二代、豪门名媛以世俗阶级、财富或规则进行审判挑衅时调用。"
+
+  - id: "EXEMP-02-SUPERNATURAL-SCALE"
+    scene_name: "阴龙潭斩妖与茶梗化剑"
+    chapter_range: "CH066-CH074"
+    file: "slices/slice_02_supernatural_revelation_ch66_74.txt"
+    core_techniques:
+      - "凡人武学向超凡修仙跃迁"
+      - "极简微观动词链 (茶梗化剑/踏水而行)"
+      - "全场认知崩塌四级跳 (疑-骇-恐-跪)"
+    best_dialogue: "米粒之珠，也敢放光芒？"
+    applicable_scenario: "从凡人地下擂台跃迁为超凡宗师大战，需要制造震撼性视觉奇观时调用。"
+
+  - id: "EXEMP-03-THREE-STAGE-CLIMAX"
+    scene_name: "药神谷大阵与真武法剑"
+    chapter_range: "CH175-CH181"
+    file: "slices/slice_03_three_stage_climax_ch175_181.txt"
+    core_techniques:
+      - "30/45/25 黄金镜头配比"
+      - "阵法底蕴与护身法器层层加码铺垫"
+      - "大道至简一招破万法 (真武法剑)"
+    best_dialogue: "破你护山大阵，只需一剑。"
+    applicable_scenario: "主角单刀直入闯入古老宗门祖宅或庞大势力总部执行灭绝定局时调用。"
+
+  - id: "EXEMP-04-FAMILY-CATHARSIS"
+    scene_name: "燕京王家清算与我不认你"
+    chapter_range: "CH605-CH616"
+    file: "slices/slice_04_emotional_debt_catharsis_ch605_616.txt"
+    core_techniques:
+      - "亲情筛选器法则 (善我者善，恶我者恶)"
+      - "血缘羁绊反差爆发"
+      - "尊严与情感债务终极清算"
+    best_dialogue: "做我的舅舅，你不够资格！我不认你们王家！"
+    applicable_scenario: "主角登临天下巅峰后，清算前世落魄时欺凌侮辱至亲亲属的世家大族时调用。"

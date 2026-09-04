@@ -146,7 +146,7 @@ class ProposalParser:
             "reason": reason or meta.get("reason", ""),
             "created_at": meta.get("created_at", ""),
             "created_by": meta.get("created_by", "HUMAN_AUTHOR"),
-            "workspace": meta.get("workspace", "D:/Ai work/novel"),
+            "workspace": meta.get("workspace", "."),
             "vault": meta.get("vault", "NOVEL_OS_VAULT"),
             "source_reference": meta.get("source_reference", ""),
             "source_version": meta.get("source_version", "2.1.0"),

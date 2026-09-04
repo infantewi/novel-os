@@ -1,0 +1,35 @@
+# REF_003 《上帝们的那些事儿》名场面与技术索引 (EXEMPLAR INDEX)
+
+reference_id: "REF_003_GODS_AFFAIRS"
+reference_book: "上帝们的那些事儿"
+author: "杨建东"
+total_volumes: 5
+total_words: 4445877
+
+exemplars:
+  - id: "EXEMP-01-PREQUEL-SMS"
+    scene_name: "赌场短信与上帝邀请 (前传)"
+    volume: "00_前传·徐锋篇"
+    core_techniques:
+      - "平静现实中突兀插入的高维契约悬念"
+      - "一句话钩子 (“你想成为上帝吗？”)"
+      - "天才主角的极简决断"
+    applicable_scenario: "无限流/科幻悬疑开篇，主角与超凡主神游戏建立初始连接时调用。"
+
+  - id: "EXEMP-02-SEVEN-WORLDS-DEADLINE"
+    scene_name: "第一战区 DEADLINE 决战收敛"
+    volume: "01_第一战区·天才博弈篇"
+    core_techniques:
+      - "多世界多团队视点在同一时限交汇碰撞"
+      - "宇宙魔方归属的多重反转与信息误判"
+      - "算力、核武、异能多维度文明战力对撞"
+    applicable_scenario: "宏大科幻、诸界争霸卷终大高潮，多个互不相识的分线团队同时爆发终极决战时调用。"
+
+  - id: "EXEMP-03-LEGEND-RERUN"
+    scene_name: "第二战区诸神黄昏与旧日因果"
+    volume: "02_第二战区·诸神争霸篇"
+    core_techniques:
+      - "高战力成熟智者的第二轮心理较量"
+      - "前世羁绊与当世抉择的冲突"
+      - "规则博弈的更高阶逻辑拆解"
+    applicable_scenario: "群像小说中后段，前代天骄与当世巨头狭路相逢展开高阶智慧交锋时调用。"

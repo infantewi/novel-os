@@ -1,0 +1,44 @@
+# REF_005 《山那边的领主》名场面与技术索引 (EXEMPLAR INDEX)
+
+reference_id: "REF_005_MEDIEVAL_LORD"
+reference_book: "山那边的领主"
+author: "eskimol"
+total_chapters: 533
+total_words: 2036290
+
+exemplars:
+  - id: "EXEMP-01-VALLEY-LEGITIMACY"
+    scene_name: "白鸽谷绝嗣危机与联姻接管 (第1-4章)"
+    file: "slices/slice_01_valley_founding_and_woodworking_ch1_5.txt"
+    core_techniques:
+      - "封建继承法绝嗣困境 (Escheatment Dilemma)"
+      - "政治妥协联姻与家庭契约建立"
+      - "三大约定确立领地建设中期目标"
+    applicable_scenario: "中世纪种田文开篇，主角如何合理合法接管初始领地、化解旧势力杀机时调用。"
+
+  - id: "EXEMP-02-WOOD-FURNITURE-ECONOMY"
+    scene_name: "林木深加工工坊与第一桶金 (第4-5章)"
+    file: "slices/slice_01_valley_founding_and_woodworking_ch1_5.txt"
+    core_techniques:
+      - "从卖初级原木到制造高端奢侈家具的价值飞跃"
+      - "成套专业工具采购与农夫技能再培训"
+      - "政治献金赎免领地农奴兵役义务"
+    applicable_scenario: "领地早期启动资金积累，利用合理手工业技术突破经济瓶颈时调用。"
+
+  - id: "EXEMP-03-AUTUMN-HARVEST-RHYTHM"
+    scene_name: "秋收时节的麦浪、税收与生活烟火 (第37-41章)"
+    file: "slices/slice_02_autumn_harvest_and_peasant_life_ch37_41.txt"
+    core_techniques:
+      - "中世纪农业生产周期的真实律动 (收割-脱粒-仓储-实物税)"
+      - "普通自耕农与农奴的爱情生活与人情味描写"
+      - "领地物质丰饶带来的读者安全感满足"
+    applicable_scenario: "种田文中期展现领地欣欣向荣、安居乐业的温情生活画卷时调用。"
+
+  - id: "EXEMP-04-CHOKEPOINT-MILITIA-DEFENSE"
+    scene_name: "狭窄山口哨卡与低成本民兵自卫战"
+    file: "slices/slice_03_militia_defense_and_chokepoint.txt"
+    core_techniques:
+      - "利用山谷天然险隘地形以少胜多"
+      - "农具武装化、弓弩阵地与猎犬配合"
+      - "击溃掠夺者后的装备缴获与难民收编"
+    applicable_scenario: "领地遭遇流窜强盗、恶霸男爵小规模试探进攻时的防守反击战调用。"

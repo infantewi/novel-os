@@ -16,12 +16,14 @@
   - story-import：已有作品导入与逆向分析
 - **lieflat-less-ai-tone**：283 万字真实语料库智能替换去 AI 味
 - **openviking-memory**：火山引擎 OpenViking 智能体长效上下文与跨会话记忆库（支持 `find`/`search`/`read`/`remember` 长期设定与写作经验沉淀）
-- **core-style-engine (极道都市仙尊流 Style DNA)**：`00_SYSTEM/STYLE_DNA_URBAN_IMMORTAL.md`（以《重生之都市修仙》439万字原著为锚点，自动注入冷峻神性、极简出手、侧面震怖、多分句长短顿挫与去 AI 味文风约束）
-## NOVEL OS V2.1 系统总则 (System Authority)
+- **snowflake-novel-craft (雪花小说工程学)**：`.agents/skills/snowflake-novel-craft`（基于兰迪·英格曼森与德怀特·斯温创作工程学体系，提供宏观雪花十步演进、微观主动/反应双螺旋场景动力学、MRU刺激反应链、7大展示工具彻底去AI味、以及十大出版拒稿体检诊断）
+## NOVEL OS 系统总则 (System Authority)
 - **最高法则**：`HUMAN > CANON > CONTINUITY > STATE > OUTLINE > PLOT > STYLE > TONE`
 - **总控中枢**：`00_SYSTEM/MASTER_ORCHESTRATOR_V2.1.md`
+- **工程标准**：`00_SYSTEM/SNOWFLAKE_NOVEL_CRAFT_STANDARD.md`
 - **执行状态**：`00_SYSTEM/EXECUTION_STATE.yaml`
-- **生产交接**：`06_HANDOFF/HANDOFF_CURRENT.md`
+- **沙盒机制**：`00_SYSTEM/MULTI_GENRE_SANDBOX_SPEC.md`（所有作品运行于 `projects/<project_name>` 物理沙盒中）
 - **禁止隐式修复**：严格执行 `NO SILENT RECOVERY`（遇冲突立即 STOP 并报告 Human）
-- **存量资产保护**：严格执行 `SAFE LEGACY INTEGRATION`，历史正文/设定/大纲保持物理原位与绝对只读
+- **存量资产保护**：严格执行 `SAFE LEGACY INTEGRATION`，设定/大纲/正文保持物理隔离与只读保护
+
 

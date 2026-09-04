@@ -1,0 +1,26 @@
+# REF_004 《无限挑战游戏》名场面与技术索引 (EXEMPLAR INDEX)
+
+reference_id: "REF_004_INFINITE_CHALLENGE"
+reference_book: "无限挑战游戏"
+author: "唐三葬"
+total_chapters: 1517
+total_words: 1715728
+
+exemplars:
+  - id: "EXEMP-01-DEATH-WISH-OPENING"
+    scene_name: "开局契约与濒死愿望 (第1-2章)"
+    chapter_range: "CH001-CH002"
+    core_techniques:
+      - "绝症/濒死主角的极端求生欲切入"
+      - "未知密室骤醒与规则面板灌输"
+      - "首个牺牲者的残酷秒杀震慑"
+    applicable_scenario: "无限流、密室逃生或规则怪谈小说第一章切入时调用。"
+
+  - id: "EXEMP-02-RULE-PARADOX-SOLVE"
+    scene_name: "规则悖论与盲区智斗破局"
+    chapter_range: "副本核心高潮段落"
+    core_techniques:
+      - "利用规则冲突制造安全盲区"
+      - "绝境下倒计时10秒的心理拉扯"
+      - "全员生还逻辑反转"
+    applicable_scenario: "副本终局解密、主角通过逆向推理破除必死死局时调用。"

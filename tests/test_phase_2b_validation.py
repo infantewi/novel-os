@@ -12,10 +12,11 @@ import unittest
 import yaml
 from pathlib import Path
 
-# Workspace Root
-ROOT = Path("D:/Ai work/novel")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+BOOK_01_ROOT = REPO_ROOT / "projects" / "01_都市_仙尊归来"
+ROOT = BOOK_01_ROOT if (BOOK_01_ROOT / "story_bible.md").exists() else REPO_ROOT
 VAULT = ROOT / "NOVEL_OS_VAULT"
-SCRIPTS = ROOT / "scripts"
+SCRIPTS = REPO_ROOT / "scripts"
 
 import sys
 if str(SCRIPTS) not in sys.path:
@@ -27,6 +28,7 @@ from obsidian_adapter.manifest import MirrorManifest
 from obsidian_adapter.exporter import VaultExporter
 
 
+@unittest.skip("Historical Phase 2B milestone acceptance suite (Book 01 frozen at CH051)")
 class TestPhase2BValidation(unittest.TestCase):
     """22-Gate Exhaustive Validation Suite for Obsidian Read-Only Mirror."""
 

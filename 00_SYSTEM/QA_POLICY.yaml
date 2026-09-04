@@ -20,6 +20,7 @@ levels:
       - Relationship_Consistency
       - State_Transition
       - Foreshadowing_Consistency
+      - Scene_POV_Integrity
 
   HIGH:
     description: "深度因果链、战力平衡与防话疗高危审查"
@@ -37,3 +38,7 @@ levels:
       - Major_Event_Integrity
       - Dialogue_Integrity
       - Anti_Talk_No_Jutsu_Audit
+      - Scene_Disaster_Integrity
+      - Visceral_Reaction_Check
+      - Swain_MRU_Check
+      - Rejection_Reason_Screen

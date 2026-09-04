@@ -1,4 +1,15 @@
-# Environment & Secrets (NEVER COMMIT SENSITIVE DATA)
+# ==============================================================================
+# NOVEL OS — Git Ignore Configuration
+# Protects private novel IP, secrets, external repositories, and system caches
+# ==============================================================================
+
+# 1. Private User Novel Projects (CRITICAL: Protect Author IP)
+# All user projects in projects/ remain private on local machine
+projects/*
+!projects/.gitkeep
+!projects/README.md
+
+# 2. Environment & Secrets (NEVER COMMIT SENSITIVE DATA)
 .env
 .env.*
 !.env.example
@@ -7,17 +18,40 @@
 credentials*
 secrets*
 
-# Python Cache & Bytecode
+# 3. Third-Party Cloned Repositories & Raw Reference Texts
+# OpenViking is an independent project; users clone or install via SDK
+OpenViking/
+# Raw reference dumps of commercial copyrighted novels must not be pushed
+references/raw_materials/
+
+# 4. Python Cache & Build Artifacts
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 .pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+dist/
+build/
+*.egg-info/
 
-# System and temporary caches
+# 5. NOVEL OS Runtime & Local Storage Caches
 .webnovel/tmp/
 .webnovel/backups/
 .openviking/storage/
+04_STATE/
+NOVEL_OS_VAULT/
+scripts/temp_*
+scripts/_temp/
+*_temp/
 *.tmp
+*.log
+
+# 6. Operating System & Editor Files
 .DS_Store
 Thumbs.db
-
+desktop.ini
+.vscode/
+.idea/

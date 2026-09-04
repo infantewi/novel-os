@@ -12,7 +12,7 @@ class ProposalConflictDetector:
     """Checks proposals against authoritative Canon, State, and Knowledge Boundaries."""
 
     def __init__(self, workspace_root: Path = None):
-        self.workspace_root = workspace_root or Path("D:/Ai work/novel")
+        self.workspace_root = workspace_root or Path(__file__).resolve().parents[3]
 
     def _compute_file_hash(self, rel_path: str) -> str:
         p = self.workspace_root / rel_path

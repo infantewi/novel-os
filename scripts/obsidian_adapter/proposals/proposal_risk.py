@@ -12,7 +12,8 @@ class ProposalRiskGate:
     """Evaluates risk score and hard triggers according to 00_SYSTEM/RISK_GATE.yaml."""
 
     def __init__(self, risk_gate_path: Path = None):
-        self.risk_gate_path = risk_gate_path or Path("D:/Ai work/novel/00_SYSTEM/RISK_GATE.yaml")
+        repo_root = Path(__file__).resolve().parents[3]
+        self.risk_gate_path = risk_gate_path or (repo_root / "00_SYSTEM" / "RISK_GATE.yaml")
         self.config = {}
         if self.risk_gate_path.exists():
             try:

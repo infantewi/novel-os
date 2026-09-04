@@ -1,0 +1,52 @@
+{
+  "file_path": "C:\\Users\\hairaito\\Desktop\\素材\\无限挑战游戏.txt",
+  "detected_encoding": "gb18030",
+  "total_characters": 2407054,
+  "total_words": 1715728,
+  "total_chapters": 1517,
+  "chapter_word_stats": {
+    "average": 1125.3,
+    "median": 1744,
+    "min": 0,
+    "max": 7571,
+    "std_deviation": 1155.3
+  },
+  "dialogue_metrics": {
+    "total_dialogue_chars": 688498,
+    "dialogue_percentage": 40.33
+  },
+  "ending_cliffhanger_distribution": {
+    "question": 25,
+    "exclamation": 146,
+    "ellipsis": 120,
+    "period": 212,
+    "other": 270
+  },
+  "first_5_chapters": [
+    {
+      "index": 1,
+      "title": "第1章 死前愿望",
+      "words": 85
+    },
+    {
+      "index": 2,
+      "title": "第1章 死前愿望",
+      "words": 2372
+    },
+    {
+      "index": 3,
+      "title": "第2章 游戏",
+      "words": 0
+    },
+    {
+      "index": 4,
+      "title": "第2章 游戏",
+      "words": 2835
+    },
+    {
+      "index": 5,
+      "title": "第3章 进击的大脑",
+      "words": 0
+    }
+  ]
+}

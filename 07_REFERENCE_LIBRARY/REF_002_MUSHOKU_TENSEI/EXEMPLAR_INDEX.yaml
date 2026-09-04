@@ -1,0 +1,44 @@
+# REF_002 《无职转生》高光名场面与技术索引 (EXEMPLAR INDEX)
+
+reference_id: "REF_002_MUSHOKU_TENSEI"
+reference_book: "无职转生 ～到了异世界就拿出真本事～"
+author: "理不尽な孙の手"
+total_volumes: 26
+total_words: 2564024
+
+exemplars:
+  - id: "EXEMP-01-TURNING-POINT-1"
+    scene_name: "大转移事件与日常破灭 (Turning Point 1)"
+    volume: "Vol 2 - Vol 3"
+    core_techniques:
+      - "平静日常被突发天灾骤然撕裂"
+      - "主角被迫踏入未知残酷世界 (魔大陆流亡)"
+      - "生存危机下的心理蜕变"
+    applicable_scenario: "长篇第一卷末期，打破安全区、强制推动主角走向广阔世界时调用。"
+
+  - id: "EXEMP-02-LABYRINTH-TRAGEDY"
+    scene_name: "转移迷宫救母与保罗之死"
+    volume: "Vol 12"
+    core_techniques:
+      - "父亲角色的悲壮牺牲与代际救赎"
+      - "胜利伴随着巨大残缺 (救出失魂母亲，失去父亲)"
+      - "抑郁、悔恨与沉沦的真实心理描写"
+    applicable_scenario: "小说中段至亲牺牲、主角心境遭受重创并面临精神崩溃时调用。"
+
+  - id: "EXEMP-03-OLD-RUDEUS-DIARY"
+    scene_name: "老鲁迪日记与未来绝望预警 (Turning Point 4)"
+    volume: "Vol 14 - Vol 15"
+    core_techniques:
+      - "时间线收束与因果倒错"
+      - "惨烈未来对当下的震慑与命运抉择"
+      - "人神阴谋的全面揭晓与绝地反抗"
+    applicable_scenario: "长篇主线进入终局对抗、揭露幕后世界真相与核心大反派时调用。"
+
+  - id: "EXEMP-04-FINAL-FAREWELL"
+    scene_name: "老去的主角与安详谢幕"
+    volume: "Vol 26"
+    core_techniques:
+      - "一生流的史诗余韵与代际传承"
+      - "回首一生的释怀与尊严 (拿出真本事活过)"
+      - "去英雄化的终局平静感"
+    applicable_scenario: "超长篇大结局，给主角与读者带来史诗级圆满闭环与余味时调用。"

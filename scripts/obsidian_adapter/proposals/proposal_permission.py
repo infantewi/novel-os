@@ -12,7 +12,8 @@ class ProposalPermissionGate:
     """Enforces explicit RBAC on proposal creation, approval, and commit actions."""
 
     def __init__(self, matrix_path: Path = None):
-        self.matrix_path = matrix_path or Path("D:/Ai work/novel/00_SYSTEM/PERMISSION_MATRIX.yaml")
+        repo_root = Path(__file__).resolve().parents[3]
+        self.matrix_path = matrix_path or (repo_root / "00_SYSTEM" / "PERMISSION_MATRIX.yaml")
         self.config = {}
         if self.matrix_path.exists():
             try:

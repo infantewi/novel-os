@@ -72,7 +72,7 @@ class Proposal:
     
     created_at: str = field(default_factory=lambda: datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S"))
     created_by: str = "HUMAN_AUTHOR"
-    workspace: str = "D:/Ai work/novel"
+    workspace: str = "."
     vault: str = "NOVEL_OS_VAULT"
     
     source_reference: str = ""

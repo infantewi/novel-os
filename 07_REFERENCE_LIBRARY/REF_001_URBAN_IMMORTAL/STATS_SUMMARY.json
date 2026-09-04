@@ -1,0 +1,52 @@
+{
+  "file_path": "C:\\Users\\hairaito\\Downloads\\重生之都市修仙.txt",
+  "detected_encoding": "utf-8",
+  "total_characters": 4392731,
+  "total_words": 3208064,
+  "total_chapters": 1246,
+  "chapter_word_stats": {
+    "average": 2564.4,
+    "median": 2653.0,
+    "min": 0,
+    "max": 9231,
+    "std_deviation": 538.2
+  },
+  "dialogue_metrics": {
+    "total_dialogue_chars": 827192,
+    "dialogue_percentage": 25.89
+  },
+  "ending_cliffhanger_distribution": {
+    "question": 0,
+    "exclamation": 0,
+    "ellipsis": 0,
+    "period": 12,
+    "other": 1224
+  },
+  "first_5_chapters": [
+    {
+      "index": 1,
+      "title": "第一卷\n\n\n------------",
+      "words": 0
+    },
+    {
+      "index": 2,
+      "title": "第一章 重回少年",
+      "words": 2546
+    },
+    {
+      "index": 3,
+      "title": "第二章 姜初然",
+      "words": 3300
+    },
+    {
+      "index": 4,
+      "title": "第三章 修行境界",
+      "words": 2916
+    },
+    {
+      "index": 5,
+      "title": "第四章 虚空炼体诀",
+      "words": 2585
+    }
+  ]
+}

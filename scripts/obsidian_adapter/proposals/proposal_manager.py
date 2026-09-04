@@ -51,7 +51,7 @@ class ProposalManager:
     ]
 
     def __init__(self, workspace_root: Optional[Path] = None, vault_root: Optional[Path] = None):
-        self.workspace_root = workspace_root or Path("D:/Ai work/novel")
+        self.workspace_root = workspace_root or Path(__file__).resolve().parents[3]
         self.vault_root = vault_root or (self.workspace_root / "NOVEL_OS_VAULT")
         
         # Check if Chinese-English folder exists or default

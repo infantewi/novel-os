@@ -1,23 +1,25 @@
-schema_version: "2.1"
+schema_version: '2.3'
 
 project:
-  title: "都市：仙尊归来，开局截胡天命机缘"
-  genre: "都市修仙"
+  title: '新小说项目'
+  genre: '通用 / 跨题材'
   subgenres:
-    - "无敌流"
-    - "都市修真"
-    - "杀伐果断"
+    - '热血'
+    - '智斗'
   target_total_words: 2000000
   target_chapters: 650
-  current_volume: 2
-  status: "IN_PRODUCTION"
+  current_volume: 1
+  status: 'PLANNING'
+  active_project_dir: 'projects/my_novel'
 
-# 字数配置 (CONFIGURABLE)
+# 字数配置 (CONFIGURABLE — HUMAN DIRECTIVE)
 chapter_word_count:
   configurable: true
-  default_min: 2000
-  default_max: 3500
-  target_optimal: 2800
+  suggested_min: 2500          # 建议单章字数 2500 字左右（软性推荐）
+  target_optimal: 2500         # 推荐目标基准字数
+  default_min: 1800            # 容差下限（依情节紧凑度灵活下浮）
+  default_max: 3500            # 容差上限（重大高潮依剧情展开灵活上浮）
+  enforcement_mode: 'SUGGESTION_ONLY' # 建议制非强制，严禁机械注水，实际根据章节剧情要求动态上下浮动
 
 # 平台与质量硬性约束
 quality_constraints:
@@ -28,8 +30,9 @@ quality_constraints:
 
 # 目录与映射配置
 paths:
-  canon_source: "设定集"
-  outline_source: "大纲"
-  prose_source: "正文"
-  state_source: "04_STATE"
+  active_project_root: 'projects/my_novel'
+  canon_source: 'projects/my_novel/设定集'
+  outline_source: 'projects/my_novel/大纲'
+  prose_source: 'projects/my_novel/正文'
+  state_source: 'projects/my_novel/04_STATE'
   legacy_mirror_enabled: true

@@ -13,7 +13,8 @@ class ProposalAuditLogger:
     """Maintains an append-only JSONL audit log for all proposal events."""
 
     def __init__(self, audit_dir: Optional[Path] = None):
-        self.audit_dir = audit_dir or Path("D:/Ai work/novel/04_STATE/PROPOSAL_AUDIT")
+        repo_root = Path(__file__).resolve().parents[3]
+        self.audit_dir = audit_dir or (repo_root / "04_STATE" / "PROPOSAL_AUDIT")
         self.audit_file = self.audit_dir / "audit_log.jsonl"
         self._ensure_dir()
 

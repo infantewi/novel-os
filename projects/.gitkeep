@@ -1,0 +1,2 @@
+# This file ensures the projects/ directory exists in git.
+# All user projects created inside projects/ are ignored by git to protect author IP.

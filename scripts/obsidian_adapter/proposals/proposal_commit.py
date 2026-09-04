@@ -18,7 +18,7 @@ class ProposalCommitGate:
     """Executes pre-commit checks and atomic application of approved proposals."""
 
     def __init__(self, workspace_root: Optional[Path] = None, audit_logger: Optional[ProposalAuditLogger] = None):
-        self.workspace_root = workspace_root or Path("D:/Ai work/novel")
+        self.workspace_root = workspace_root or Path(__file__).resolve().parents[3]
         self.permission_gate = ProposalPermissionGate(self.workspace_root / "00_SYSTEM" / "PERMISSION_MATRIX.yaml")
         self.audit_logger = audit_logger or ProposalAuditLogger(self.workspace_root / "04_STATE" / "PROPOSAL_AUDIT")
 
