@@ -189,7 +189,29 @@ NOVEL OS 深度整合了现代智能体技能生态，所有技能均位于 `.ag
 
 ---
 
+## 致谢与外部开源引用 (Acknowledgments & Prior Art)
+
+NOVEL OS 站在众多杰出的小说创作理论家、开源项目与智能体生态先驱的肩膀上。特此对以下理论体系与开源项目致以诚挚的敬意与感谢：
+
+### 1. 经典创作工程学理论 (Narrative Craft & Theory)
+- **[Randy Ingermanson — The Snowflake Method](https://www.advancedfictionwriting.com/articles/snowflake-method/)**：雪花写作法创立者。NOVEL OS 的宏观十步演进模型、25 字电梯钩子与三幕五段大纲体系深深得益于其严密的工程化递归构思理念。
+- **Dwight V. Swain — *Techniques of the Selling Writer***：微观双螺旋场景动力学（主动型：目标-冲突-挫折 / 反应型：反应-困境-决定）与动机反应单元（MRU 刺激-内脏-行动-言语链条）理论奠基人。
+
+### 2. 开源智能体技能与记忆系统 (Agent Skills & Memory)
+- **[volcengine/OpenViking](https://github.com/volcengine/OpenViking)**：字节跳动 / 火山引擎开源的智能体长效上下文与语义记忆系统。NOVEL OS 的分层知识检索与记忆守门人（Memory Governor）深度基于其核心规范构建。
+- **[kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)**：Obsidian CEO Steph Ango 开源的 Obsidian 智能体技能标准。NOVEL OS 的只读投影与提案式治理（Proposals）全面采用其原生知识组织理念。
+- **[zenstory-ai/oh-story-claudecode](https://github.com/zenstory-ai/oh-story-claudecode)**：专为长篇网文设计的智能体路由与工具箱，为 NOVEL OS 的分卷规划与正文生产流程提供了重要参考。
+- **[op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)**：中文去 AI 味与提示词拟人化工具，为系统的 `De-AI-Prompt-Enhancer` 提供了优质的写前物理感官注入与人设锚定设计。
+- **[Lieflat Less AI Tone (躺平者去AI味)](https://moxt.ai/zh-CN/hub?type=skill&id=lieflat-less-ai-tone)**：基于 283 万字真实中文文学语料库量化对照研究制作的语言学去 AI 味清洗工具。
+- **Jayce (`fanqie-novel-skill`)**：番茄平台长篇商业合规审查、反话疗硬约束与防战力崩溃审计维度的设计者。
+
+### 3. 底层基础设施 (Infrastructure & Ecosystem)
+- **[Anthropic Claude Code](https://claude.ai/code)** & **[Google DeepMind Antigravity](https://deepmind.google/)**：现代先进的代码与长任务多智能体协作环境，提供了完善的 Agent Skills 规范与 Slash Commands 交互生态。
+
+---
+
 ## 开源协议 (License)
 
 本项目采用 [MIT License](LICENSE) 开源协议。
 您使用 NOVEL OS 创作的所有小说作品、大纲与设定均属于创作者本人的独立知识产权。
+
